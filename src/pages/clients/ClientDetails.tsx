@@ -1,26 +1,10 @@
-import { Button, Carousel, Divider, Image } from "antd";
+import { Carousel } from "antd";
 import video from "../../assets/9535416-uhd_3840_2160_30fps.mp4";
-import image from "../../assets/prva.jpg";
 import "../../styles/event.scss";
 import "../../styles/clients.scss";
 import { useParams } from "react-router";
 import { useRef, useState } from "react";
 import { CiFacebook, CiInstagram, CiMail, CiYoutube } from "react-icons/ci";
-
-const images = [
-  { src: image, alt: "image1", description: "vale's image" },
-  { src: image, alt: "image", description: "web's image" },
-  { src: image, alt: "image1", description: "vale's image" },
-  { src: image, alt: "image", description: "web's image" },
-  { src: image, alt: "image1", description: "vale's image" },
-  { src: image, alt: "image", description: "web's image" },
-  { src: image, alt: "image1", description: "vale's image" },
-  { src: image, alt: "image", description: "web's image" },
-  { src: image, alt: "image1", description: "vale's image" },
-  { src: image, alt: "image1", description: "vale's image" },
-  { src: image, alt: "image", description: "web's image" },
-  { src: image, alt: "image1", description: "vale's image" },
-];
 
 const videoSources = [{ src: video }, { src: video }, { src: video }];
 

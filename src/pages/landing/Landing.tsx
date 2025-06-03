@@ -6,8 +6,6 @@ import { useNavigate } from "react-router";
 import { Carousel } from "antd";
 import "antd/dist/reset.css";
 
-const imageSources = [{ src: image }, { src: image2 }];
-
 const LandingPage = () => {
   const navigate = useNavigate();
 

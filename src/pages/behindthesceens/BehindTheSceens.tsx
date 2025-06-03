@@ -1,4 +1,3 @@
-import { Divider } from "antd";
 import video from "../../assets/9535416-uhd_3840_2160_30fps.mp4";
 import { CiFacebook, CiInstagram, CiMail, CiYoutube } from "react-icons/ci";
 

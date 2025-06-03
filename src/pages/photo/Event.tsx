@@ -1,5 +1,3 @@
-import { Divider, Image } from "antd";
-import video from "../../assets/9535416-uhd_3840_2160_30fps.mp4";
 import image from "../../assets/unnamed.jpg";
 import "../../styles/event.scss";
 import { useContext } from "react";

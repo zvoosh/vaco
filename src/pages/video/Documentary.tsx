@@ -1,23 +1,8 @@
-import { Divider, Image } from "antd";
+import { Divider } from "antd";
 import video from "../../assets/9535416-uhd_3840_2160_30fps.mp4";
-import image from "../../assets/unnamed.jpg";
 import "../../styles/clients.scss";
 import { CiFacebook, CiInstagram, CiMail, CiYoutube } from "react-icons/ci";
 
-const images = [
-  { src: image, alt: "image1", description: "vale's image" },
-  { src: image, alt: "image", description: "web's image" },
-  { src: image, alt: "image1", description: "vale's image" },
-  { src: image, alt: "image", description: "web's image" },
-  { src: image, alt: "image1", description: "vale's image" },
-  { src: image, alt: "image", description: "web's image" },
-  { src: image, alt: "image1", description: "vale's image" },
-  { src: image, alt: "image", description: "web's image" },
-  { src: image, alt: "image1", description: "vale's image" },
-  { src: image, alt: "image1", description: "vale's image" },
-  { src: image, alt: "image", description: "web's image" },
-  { src: image, alt: "image1", description: "vale's image" },
-];
 
 const DocumentaryPage = () => {
   return (
