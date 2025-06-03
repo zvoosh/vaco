@@ -49,24 +49,23 @@ const PortraitPage = () => {
           {!ctx?.value && (
             <div className="card-grid">
               {images.map((element, index) => (
-                <>
-                  <div
-                    className="card"
-                    onClick={() => {
-                      ctx?.setValue(true);
-                      ctx?.setIndex(index);
-                    }}
-                  >
-                    <img
-                      src={element.src}
-                      alt={element.alt}
-                      className="responsive"
-                    />
-                    <div className="overlay">
-                      <p className="overlay-text">{element.description}</p>
-                    </div>
+                <div
+                  key={index}
+                  className="card"
+                  onClick={() => {
+                    ctx?.setValue(true);
+                    ctx?.setIndex(index);
+                  }}
+                >
+                  <img
+                    src={element.src}
+                    alt={element.alt}
+                    className="responsive"
+                  />
+                  <div className="overlay">
+                    <p className="overlay-text">{element.description}</p>
                   </div>
-                </>
+                </div>
               ))}
             </div>
           )}
