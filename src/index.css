@@ -9,3 +9,18 @@
 .normal-font {
   font-family: "Proxima Nova", sans-serif;
 }
+::-webkit-scrollbar {
+  width: 6px; /* Adjust for thinness */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: gray;
+  border-radius: 3px; /* Smooth edges */
+}
+body {
+  line-height: 1.6; /* Adjust this value for spacing */
+}

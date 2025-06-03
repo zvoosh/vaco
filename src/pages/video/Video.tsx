@@ -1,12 +1,14 @@
 import { useNavigate } from "react-router";
 import image from "../../assets/road.jpg";
+import image2 from "../../assets/cowboy.jpg";
+import image3 from "../../assets/mountain.jpg";
 import "../../styles/arial.scss";
 
 const VideoPage = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="text-white w-100 h-100 pt-2 flex justify-center">
+    <div className="text-white w-100 h-100 p-05 pt-2 flex justify-center">
       <div className="w-100 h-100">
         <div
           className="division-card"
@@ -27,7 +29,7 @@ const VideoPage = () => {
             navigate("/video-documentary");
           }}>
           <img
-            src={image}
+            src={image3}
             alt="image"
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
           />
@@ -39,7 +41,7 @@ const VideoPage = () => {
             navigate("/video-commercial");
           }}>
           <img
-            src={image}
+            src={image2}
             alt="image"
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
           />
@@ -63,7 +65,7 @@ const VideoPage = () => {
             navigate("/video-coorporate");
           }}>
           <img
-            src={image}
+            src={image2}
             alt="image"
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
           />

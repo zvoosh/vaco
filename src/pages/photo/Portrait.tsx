@@ -72,7 +72,7 @@ const PortraitPage = () => {
           {ctx?.value && typeof ctx.index === "number" && (
             <div className="w-100 h-100 flex justify-center">
               <div className="mt-5 pl-2 pr-2 ">
-                <div style={{ maxWidth: "900px" }}>
+                <div style={{ maxWidth: "1600px" }}>
                   <img
                     key={ctx.index}
                     src={images[ctx.index].src}

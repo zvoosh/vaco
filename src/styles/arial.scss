@@ -24,12 +24,28 @@
 .division-card:hover .division-overlay {
   opacity: 1;
 }
+.division-card,
+.division-card img {
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .division-overlay-text {
   color: white;
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: bold;
   width: 100%;
   text-align: start;
+  letter-spacing: 1rem;
   padding: 5rem;
   text-transform: uppercase;
 }
@@ -49,6 +65,9 @@
     margin-bottom: 0.5rem;
     cursor: pointer;
   }
+  .division-overlay {
+    display: none;
+  }
 }
 
 @media (min-width: 480px) {
@@ -59,6 +78,9 @@
     height: 75vw;
     margin-bottom: 0.5rem;
     cursor: pointer;
+  }
+  .division-overlay {
+    display: none;
   }
 }
 
@@ -71,7 +93,11 @@
     margin-bottom: 0.5rem;
     cursor: pointer;
   }
+  .division-overlay {
+    display: none;
+  }
 }
+
 @media (min-width: 1024px) {
   .division-card {
     position: relative;
@@ -80,6 +106,9 @@
     height: 50vh;
     margin-bottom: 0.5rem;
     cursor: pointer;
+  }
+  .division-overlay {
+    display: flex;
   }
 }
 @media (min-width: 1440px) {
@@ -90,5 +119,8 @@
     height: 50vh;
     margin-bottom: 0.5rem;
     cursor: pointer;
+  }
+  .division-overlay {
+    display: flex;
   }
 }

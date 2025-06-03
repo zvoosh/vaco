@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router";
+import { useLocation, useNavigate } from "react-router";
 import "../styles/header.scss";
 import { useContext, useState } from "react";
 import { MyContext } from "../services";
@@ -7,6 +7,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const ctx = useContext(MyContext);
   const navigate = useNavigate();
+  const location = useLocation();
   return (
     <div className="w-100 bg-black text-gray flex flex-column justify-center align-center header-font">
       <div
@@ -15,7 +16,9 @@ const Header = () => {
         }`}
       >
         <div
-          className="p-05 font-12"
+          className={`p-05 font-12 ${
+            location.pathname == "/" ? "text-white bold" : ""
+          }`}
           onClick={() => {
             navigate("/");
           }}
@@ -23,23 +26,16 @@ const Header = () => {
           Home
         </div>
         <div
-          className="p-05 font-12"
-          onClick={() => {
-            navigate("/contact");
-          }}
-        >
-          About
-        </div>
-        <div
-          className="p-05 font-12"
-          onClick={() => {
-            navigate("/clients");
-          }}
-        >
-          Clients
-        </div>
-        <div
-          className="p-05 font-12"
+          className={`p-05 font-12 ${
+            location.pathname == "/video" ||
+            location.pathname == "/video-feature" ||
+            location.pathname == "/video-event" ||
+            location.pathname == "/video-coorporate" ||
+            location.pathname == "/video-commercial" ||
+            location.pathname == "/video-documentary"
+              ? "text-white bold"
+              : ""
+          }`}
           onClick={() => {
             navigate("/video");
           }}
@@ -47,7 +43,14 @@ const Header = () => {
           Video
         </div>
         <div
-          className="p-05 font-12"
+          className={`p-05 font-12 ${
+            location.pathname == "/photo" ||
+            location.pathname == "/portrait" ||
+            location.pathname == "/event" ||
+            location.pathname == "/coorporate"
+              ? "text-white bold"
+              : ""
+          }`}
           onClick={() => {
             navigate("/photo");
           }}
@@ -55,7 +58,9 @@ const Header = () => {
           Photo
         </div>
         <div
-          className="p-05 font-12"
+          className={`p-05 font-12 ${
+            location.pathname == "/airial" ? "text-white bold" : ""
+          }`}
           onClick={() => {
             navigate("/airial");
           }}
@@ -63,7 +68,19 @@ const Header = () => {
           Airial
         </div>
         <div
-          className="p-05 font-12"
+          className={`p-05 font-12 ${
+            location.pathname == "/clients" ? "text-white bold" : ""
+          }`}
+          onClick={() => {
+            navigate("/clients");
+          }}
+        >
+          Clients
+        </div>
+        <div
+          className={`p-05 font-12 ${
+            location.pathname == "/behind-the-sceens" ? "text-white bold" : ""
+          }`}
           onClick={() => {
             navigate("/behind-the-sceens");
           }}
@@ -71,12 +88,24 @@ const Header = () => {
           Behind the sceens
         </div>
         <div
-          className="p-05 font-12"
+          className={`p-05 font-12 ${
+            location.pathname == "/gear" ? "text-white bold" : ""
+          }`}
           onClick={() => {
             navigate("/gear");
           }}
         >
           Gear
+        </div>
+        <div
+          className={`p-05 font-12 ${
+            location.pathname == "/contact" ? "text-white bold" : ""
+          }`}
+          onClick={() => {
+            navigate("/contact");
+          }}
+        >
+          Contact
         </div>
       </div>
       <div
@@ -108,7 +137,9 @@ const Header = () => {
       {!ctx?.value && (
         <div className="flex flex-row justify-between links-container">
           <div
-            className="pointer user-none"
+            className={`pointer user-none ${
+              location.pathname == "/" ? "text-white bold" : ""
+            }`}
             onClick={() => {
               navigate("/");
             }}
@@ -116,26 +147,19 @@ const Header = () => {
             Home
           </div>
           <div
-            className="pointer user-none"
-            onClick={() => {
-              navigate("/contact");
-            }}
-          >
-            About
-          </div>
-          <div
-            className="pointer user-none"
-            onClick={() => {
-              navigate("/clients");
-            }}
-          >
-            Clients
-          </div>
-          <div
             onClick={() => {
               navigate("/video");
             }}
-            className="pointer user-none"
+            className={`pointer user-none ${
+              location.pathname == "/video" ||
+              location.pathname == "/video-feature" ||
+              location.pathname == "/video-event" ||
+              location.pathname == "/video-coorporate" ||
+              location.pathname == "/video-commercial" ||
+              location.pathname == "/video-documentary"
+                ? "text-white bold"
+                : ""
+            }`}
           >
             <div>Video</div>
           </div>
@@ -143,12 +167,21 @@ const Header = () => {
             onClick={() => {
               navigate("/photo");
             }}
-            className="pointer user-none"
+            className={`pointer user-none ${
+              location.pathname == "/photo" ||
+              location.pathname == "/portrait" ||
+              location.pathname == "/event" ||
+              location.pathname == "/coorporate"
+                ? "text-white bold"
+                : ""
+            }`}
           >
             <div>Photo</div>
           </div>
           <div
-            className="pointer user-none"
+            className={`pointer user-none ${
+              location.pathname == "/airial" ? "text-white bold" : ""
+            }`}
             onClick={() => {
               navigate("/airial");
             }}
@@ -156,7 +189,19 @@ const Header = () => {
             Airial
           </div>
           <div
-            className="pointer user-none"
+            className={`pointer user-none ${
+              location.pathname == "/clients" ? "text-white bold" : ""
+            }`}
+            onClick={() => {
+              navigate("/clients");
+            }}
+          >
+            Clients
+          </div>
+          <div
+            className={`pointer user-none ${
+              location.pathname == "/behind-the-sceens" ? "text-white bold" : ""
+            }`}
             onClick={() => {
               navigate("/behind-the-sceens");
             }}
@@ -164,12 +209,24 @@ const Header = () => {
             Behind the Sceens
           </div>
           <div
-            className="pointer user-none"
+            className={`pointer user-none ${
+              location.pathname == "/gear" ? "text-white bold" : ""
+            }`}
             onClick={() => {
               navigate("/gear");
             }}
           >
             Gear
+          </div>
+          <div
+            className={`pointer user-none ${
+              location.pathname == "/contact" ? "text-white bold" : ""
+            }`}
+            onClick={() => {
+              navigate("/contact");
+            }}
+          >
+            Contact
           </div>
         </div>
       )}

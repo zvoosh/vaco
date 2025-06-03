@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router";
 import "./App.css";
 import "./styles/index.css";
+import ScrollToTop from "./components/ScrollToTop";
 import RootLayout from "./routes/RootLayout";
 import {
   AirialPage,
@@ -25,6 +26,7 @@ import {
 function App() {
   return (
     <BrowserRouter basename="/vaco/">
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<RootLayout />}>
           <Route index element={<LandingPage />} />

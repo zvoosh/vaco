@@ -1,13 +1,15 @@
 import { useContext } from "react";
-import image from "../../assets/goalkeeper.jpg";
-import video from "../../assets/9535416-uhd_3840_2160_30fps.mp4";
+import image from "../../assets/baloons.jpg";
+import image2 from "../../assets/mountins.jpg";
+import image3 from "../../assets/cowboy.jpg";
+import video from "../../assets/airial.mp4";
 import { MyContext } from "../../services";
 import "../../styles/arial.scss";
 
 const AirialPage = () => {
   const ctx = useContext(MyContext);
   return (
-    <div className="text-white w-100 pt-2 flex justify-center">
+    <div className="text-white w-100 p-05 pt-2 flex justify-center">
       {!ctx?.value && (
         <div className="w-100 h-100">
           <div
@@ -17,7 +19,7 @@ const AirialPage = () => {
             }}
           >
             <img
-              src={image}
+              src={image3}
               alt="image"
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
             />
@@ -32,7 +34,7 @@ const AirialPage = () => {
             }}
           >
             <img
-              src={image}
+              src={image2}
               alt="image"
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
             />
@@ -62,7 +64,7 @@ const AirialPage = () => {
             }}
           >
             <img
-              src={image}
+              src={image2}
               alt="image"
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
             />
