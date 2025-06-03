@@ -1,0 +1,42 @@
+.text-center {
+  text-align: center;
+}
+
+.bordered {
+  &-large {
+    border-radius: 50px;
+  }
+  &-medium {
+    border-radius: 20px;
+  }
+  &-small {
+    border-radius: 10px;
+  }
+}
+
+.shade {
+  box-shadow: 0px 2px 5px black;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-y {
+  overflow-y: auto;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.user-none {
+  user-select: none;
+}
+
+.grid {
+  display: grid;
+}
+.gap-25 {
+  gap: 25px;
+}

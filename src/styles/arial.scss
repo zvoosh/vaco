@@ -1,0 +1,94 @@
+// .division-card {
+//   position: relative;
+//   display: inline-block;
+//   width: 100vw;
+//   height: 85vw;
+//   margin-bottom: 0.5rem;
+//   cursor: pointer;
+// }
+.division-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0s ease-in-out;
+  user-select: none;
+}
+
+.division-card:hover .division-overlay {
+  opacity: 1;
+}
+.division-overlay-text {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  width: 100%;
+  text-align: start;
+  padding: 5rem;
+  text-transform: uppercase;
+}
+
+.division-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 479px) {
+  .division-card {
+    position: relative;
+    display: inline-block;
+    width: 100vw;
+    height: 85vw;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 480px) {
+  .division-card {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 75vw;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 768px) {
+  .division-card {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 55vw;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+  }
+}
+@media (min-width: 1024px) {
+  .division-card {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 50vh;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+  }
+}
+@media (min-width: 1440px) {
+  .division-card {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 50vh;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+  }
+}

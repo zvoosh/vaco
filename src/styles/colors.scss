@@ -1,0 +1,46 @@
+.bg {
+  &-black {
+    background-color: #252628;
+  }
+  &-white {
+    background-color: #bfbfbf;
+  }
+  &-red {
+    background-color: red;
+  }
+  &-blue {
+    background-color: blue;
+  }
+  &-yellow {
+    background-color: yellow;
+  }
+  &-gray {
+    background-color: #ABABAB;
+  }
+  &-white-gray {
+    background-color: #E7E7E8;
+  }
+}
+.text {
+  &-black {
+    color: #3A2F2F;
+  }
+  &-white {
+    color: white;
+  }
+  &-red {
+    color: red;
+  }
+  &-blue {
+    color: blue;
+  }
+  &-yellow {
+    color: yellow;
+  }
+  &-gray {
+    color: #ABABAB;
+  }
+  &-white-gray {
+    color: #646464;
+  }
+}

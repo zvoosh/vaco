@@ -1,0 +1,63 @@
+.font {
+  &-20 {
+    font-size: 2rem;
+  }
+  &-18 {
+    font-size: 1.8rem;
+  }
+  &-16 {
+    font-size: 1.6rem;
+  }
+  &-14 {
+    font-size: 1.4rem;
+  }
+  &-12 {
+    font-size: 1.2rem;
+  }
+  &-10 {
+    font-size: 1rem;
+  }
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.thin {
+  font-weight: 100;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.italic{
+  font-style: italic;
+}
+
+.letter-spacing {
+  &-16 {
+    letter-spacing: 1.6rem;
+  }
+  &-15 {
+    letter-spacing: 1.5rem;
+  }
+  &-14 {
+    letter-spacing: 1.4rem;
+  }
+  &-13 {
+    letter-spacing: 1.3rem;
+  }
+  &-12 {
+    letter-spacing: 1.2rem;
+  }
+  &-11 {
+    letter-spacing: 1.1rem;
+  }
+}
+
+.line-spacing {
+  &-11 {
+    line-height: 1, 1;
+  }
+}
