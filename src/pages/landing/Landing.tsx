@@ -22,7 +22,7 @@ const LandingPage = () => {
       </div>
 
       <div className="landing-headline">
-        <div className="w-100 text-center mt-3 font-20">VACO</div>
+        <div className="w-100 text-center mt-3 font-20" style={{letterSpacing: ".5rem"}}>VACO</div>
         <div className="w-100 text-center">
           <ReactTyped
             strings={["Live to tell stories"]}
@@ -48,7 +48,7 @@ const LandingPage = () => {
           <CiMail className="mr-2" style={{ transform: "scale(2)" }} />
           <CiFacebook className="mr-2" style={{ transform: "scale(2)" }} />
           <CiInstagram className="mr-2" style={{ transform: "scale(2)" }} />
-          <CiYoutube className="mr-2" style={{ transform: "scale(2)" }} />
+          <CiYoutube className="" style={{ transform: "scale(2)" }} />
         </div>
       </div>
     </div>

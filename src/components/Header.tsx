@@ -1,6 +1,6 @@
-import { useLocation, useNavigate } from "react-router";
+import { useLocation, useNavigate, useParams } from "react-router";
 import "../styles/header.scss";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { MyContext } from "../services";
 
 const Header = () => {
@@ -8,6 +8,16 @@ const Header = () => {
   const ctx = useContext(MyContext);
   const navigate = useNavigate();
   const location = useLocation();
+  const { client } = useParams();
+
+  useEffect(() => {
+    console.log(location.pathname);
+    console.log(location.pathname.includes("clients"));
+  }, [location.pathname]);
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location.pathname]);
   return (
     <div className="w-100 bg-black text-gray flex flex-column justify-center align-center header-font">
       <div
@@ -21,6 +31,7 @@ const Header = () => {
           }`}
           onClick={() => {
             navigate("/");
+            setIsOpen(false);
           }}
         >
           Home
@@ -38,6 +49,7 @@ const Header = () => {
           }`}
           onClick={() => {
             navigate("/video");
+            setIsOpen(false);
           }}
         >
           Video
@@ -53,6 +65,7 @@ const Header = () => {
           }`}
           onClick={() => {
             navigate("/photo");
+            setIsOpen(false);
           }}
         >
           Photo
@@ -63,16 +76,19 @@ const Header = () => {
           }`}
           onClick={() => {
             navigate("/airial");
+            setIsOpen(false);
           }}
         >
           Airial
         </div>
         <div
+          key={location.pathname}
           className={`p-05 font-12 ${
-            location.pathname == "/clients" ? "text-white bold" : ""
+            location.pathname.includes("/clients") ? "text-white bold" : ""
           }`}
           onClick={() => {
             navigate("/clients");
+            setIsOpen(false);
           }}
         >
           Clients
@@ -83,6 +99,7 @@ const Header = () => {
           }`}
           onClick={() => {
             navigate("/behind-the-sceens");
+            setIsOpen(false);
           }}
         >
           Behind the sceens
@@ -93,6 +110,7 @@ const Header = () => {
           }`}
           onClick={() => {
             navigate("/gear");
+            setIsOpen(false);
           }}
         >
           Gear
@@ -103,6 +121,7 @@ const Header = () => {
           }`}
           onClick={() => {
             navigate("/contact");
+            setIsOpen(false);
           }}
         >
           Contact
@@ -193,7 +212,7 @@ const Header = () => {
           </div>
           <div
             className={`pointer user-none ${
-              location.pathname == "/clients" ? "text-white bold" : ""
+              location.pathname.includes("clients") ? "text-white bold" : ""
             }`}
             onClick={() => {
               navigate("/clients");

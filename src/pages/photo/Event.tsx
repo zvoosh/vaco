@@ -42,6 +42,7 @@ const EventPage = () => {
               >
                 {images.map((element, index) => (
                   <Image
+                    key={index}
                     src={element.src}
                     alt={element.alt}
                     className="responsive"
