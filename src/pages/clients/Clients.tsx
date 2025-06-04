@@ -79,14 +79,7 @@ const ClientsPage = () => {
         <div className="client-container">
           <div className="w-100 h-100 pt-2 flex flex-column">
             {card.map((element, index) => (
-              <div
-                key={index}
-                className="client-card-container"
-                style={{ cursor: "pointer" }}
-                onClick={() => {
-                  navigate(`/clients/details/${element.title}`);
-                }}
-              >
+              <div key={index} className="client-card-container">
                 <div className="client-image-card">
                   <img
                     src={element.image}
@@ -99,8 +92,18 @@ const ClientsPage = () => {
                   />
                 </div>
                 <div className="client-text-card">
-                  <div className="font-16">{element.title}</div>
+                  <div className="font-16 flex">
+                    <div>{element.title}</div>{" "}
+                  </div>
                   <div className="pt-1">{element.description}</div>
+                  <div
+                    className="link-see-more"
+                    onClick={() => {
+                      navigate(`/clients/details/${element.title}`);
+                    }}
+                  >
+                    Show more
+                  </div>
                 </div>
               </div>
             ))}

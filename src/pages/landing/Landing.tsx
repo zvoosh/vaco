@@ -13,7 +13,7 @@ const LandingPage = () => {
 
   return (
     <div className="w-100 h-100 bg-black text-white flex">
-      <div style={{ width: "50vw", height: "100vh" }}>
+      <div className="landing-carousel">
         <Carousel autoplay dots={false} className="carousel">
           <img src={image} alt="Image 1" />
           <img src={image2} alt="Image 2" />
@@ -21,7 +21,7 @@ const LandingPage = () => {
         </Carousel>
       </div>
 
-      <div className="flex flex-column align-center w-50 h-100 justify-between">
+      <div className="landing-headline">
         <div className="w-100 text-center mt-3 font-20">VACO</div>
         <div className="w-100 text-center">
           <ReactTyped
