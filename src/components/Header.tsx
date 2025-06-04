@@ -108,14 +108,17 @@ const Header = () => {
           Contact
         </div>
       </div>
-      <div
-        className="w-100 text-center uppercase font-12 mt-1 text-white-gray menu-btn"
-        onClick={() => {
-          setIsOpen((prev) => !prev);
-        }}
-      >
-        MENU
-      </div>
+
+      {!ctx?.value && (
+        <div
+          className="w-100 text-center uppercase font-12 mt-1 text-white-gray menu-btn"
+          onClick={() => {
+            setIsOpen((prev) => !prev);
+          }}
+        >
+          MENU
+        </div>
+      )}
       <div className="header-container">
         <div className="header-left"></div>
         <div className="header-center">VACO</div>

@@ -68,9 +68,30 @@
   .links-container {
     display: none;
   }
+  .header-container {
+    width: 100%;
+    padding-top: 1rem;
+    letter-spacing: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+  }
   .header-center {
     font-size: 100%;
     width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header-left {
+    width: auto;
+    height: 100%;
+  }
+  .header-right {
+    text-align: right;
+    width: auto;
+    padding-right: 5rem;
+    height: 100%;
   }
 }
 

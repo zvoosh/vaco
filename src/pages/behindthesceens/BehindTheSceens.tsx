@@ -39,7 +39,7 @@ const BehindTheSceensPage = () => {
                 little time. The problem is us. And it is up to us if we want to
                 make it to 3 seconds.
               </div>
-              <video className="w-100 p-1" controls>
+              <video className="w-100 mb-1" controls>
                 <source src={video} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>

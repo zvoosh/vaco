@@ -7,7 +7,7 @@ import "../../styles/arial.scss";
 const PhotoPage = () => {
   const navigate = useNavigate();
   return (
-    <div className="text-white w-100 h-100 p-05 pt-2 flex justify-center">
+    <div className="text-white w-100 p-05 pt-2 flex justify-center">
       <div className="w-100 h-100">
         <div className="division-card" onClick={()=> {
           navigate('/portrait')

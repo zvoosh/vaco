@@ -85,7 +85,7 @@ const ClientDetailsPage = () => {
               {videoSources.map((video, idx) => (
                 <div key={idx}>
                   <video
-                    className="w-100 p-1"
+                    className="w-100 mb-1"
                     controls
                     onPlaying={handleVideoPlaying}
                     onPause={handleVideoPauseOrEnd}
