@@ -1,22 +1,27 @@
 import image from "../../assets/unnamed.jpg";
+import image2 from "../../assets/baloons.jpg";
+import image3 from "../../assets/mountins.jpg";
+import image4 from "../../assets/mountain.jpg";
+import image5 from "../../assets/portrait.jpg";
 import "../../styles/event.scss";
 import { useContext } from "react";
 import { MyContext } from "../../services";
 import { CiFacebook, CiInstagram, CiMail, CiYoutube } from "react-icons/ci";
+import { Image } from "antd";
 
 const images = [
   { src: image, alt: "image1", description: "vale's image" },
+  { src: image2, alt: "image", description: "web's image" },
+  { src: image3, alt: "image1", description: "vale's image" },
+  { src: image4, alt: "image", description: "web's image" },
+  { src: image5, alt: "image1", description: "vale's image" },
   { src: image, alt: "image", description: "web's image" },
-  { src: image, alt: "image1", description: "vale's image" },
+  { src: image2, alt: "image1", description: "vale's image" },
+  { src: image3, alt: "image", description: "web's image" },
+  { src: image4, alt: "image1", description: "vale's image" },
+  { src: image5, alt: "image1", description: "vale's image" },
   { src: image, alt: "image", description: "web's image" },
-  { src: image, alt: "image1", description: "vale's image" },
-  { src: image, alt: "image", description: "web's image" },
-  { src: image, alt: "image1", description: "vale's image" },
-  { src: image, alt: "image", description: "web's image" },
-  { src: image, alt: "image1", description: "vale's image" },
-  { src: image, alt: "image1", description: "vale's image" },
-  { src: image, alt: "image", description: "web's image" },
-  { src: image, alt: "image1", description: "vale's image" },
+  { src: image2, alt: "image1", description: "vale's image" },
 ];
 
 const EventPage = () => {
@@ -27,26 +32,27 @@ const EventPage = () => {
         <div className="w-100 h-100 flex justify-center">
           {!ctx?.value && (
             <div className="card-grid">
-              {images.map((element, index) => (
-                <>
-                  <div
-                    className="card"
-                    onClick={() => {
-                      ctx?.setValue(true);
-                      ctx?.setIndex(index);
+              <Image.PreviewGroup
+                preview={{
+                  onChange: (current, prev) =>
+                    console.log(
+                      `current index: ${current}, prev index: ${prev}`
+                    ),
+                }}
+              >
+                {images.map((element, index) => (
+                  <Image
+                    src={element.src}
+                    alt={element.alt}
+                    className="responsive"
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
                     }}
-                  >
-                    <img
-                      src={element.src}
-                      alt={element.alt}
-                      className="responsive"
-                    />
-                    <div className="overlay">
-                      <p className="overlay-text">{element.description}</p>
-                    </div>
-                  </div>
-                </>
-              ))}
+                  />
+                ))}
+              </Image.PreviewGroup>
             </div>
           )}
           {ctx?.value && typeof ctx.index === "number" && (

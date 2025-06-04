@@ -106,8 +106,8 @@ const AirialPage = () => {
       )}
       {ctx?.value && (
         <div className="w-100 flex justify-center">
-          <div className="mt-1 pl-2 pr-2 ">
-            <div style={{ maxWidth: "75vw" }}>
+          <div className="mt-1">
+            <div className="video-container">
               <video
                 className="w-100 h-auto object-cover fade-in-on-load"
                 controls

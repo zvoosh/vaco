@@ -3,6 +3,7 @@ import "../../styles/portrait.scss";
 import { CiFacebook, CiInstagram, CiMail, CiYoutube } from "react-icons/ci";
 import { useContext, useEffect } from "react";
 import { MyContext } from "../../services";
+import { Image } from "antd";
 
 const images = [
   { src: image, alt: "image1", description: "vale's image" },
@@ -27,26 +28,22 @@ const CoorporatePage = () => {
         <div className="w-100 h-100 flex justify-center">
           {!ctx?.value && (
             <div className="card-grid">
-              {images.map((element, index) => (
-                <>
-                  <div
-                    className="card"
-                    onClick={() => {
-                      ctx?.setValue(true);
-                      ctx?.setIndex(index);
-                    }}
-                  >
-                    <img
-                      src={element.src}
-                      alt={element.alt}
-                      className="responsive"
-                    />
-                    <div className="overlay">
-                      <p className="overlay-text">{element.description}</p>
-                    </div>
-                  </div>
-                </>
-              ))}
+              <Image.PreviewGroup
+                preview={{
+                  onChange: (current, prev) =>
+                    console.log(
+                      `current index: ${current}, prev index: ${prev}`
+                    ),
+                }}
+              >
+                {images.map((element, index) => (
+                  <Image
+                    src={element.src}
+                    alt={element.alt}
+                    className="responsive"
+                  />
+                ))}
+              </Image.PreviewGroup>
             </div>
           )}
           {ctx?.value && typeof ctx.index === "number" && (

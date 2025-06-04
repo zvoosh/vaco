@@ -21,6 +21,9 @@
   user-select: none;
 }
 
+.video-container {
+  max-width: 75vw;
+}
 .division-card:hover .division-overlay {
   opacity: 1;
 }
@@ -79,6 +82,9 @@
     padding: 0rem;
     text-transform: uppercase;
   }
+  .video-container {
+    max-width: 100%;
+  }
 }
 
 @media (min-width: 480px) {
@@ -94,6 +100,9 @@
   .division-overlay {
     display: none;
   }
+  .video-container {
+    max-width: 100%;
+  }
 }
 
 @media (min-width: 768px) {
@@ -107,6 +116,9 @@
   }
   .division-overlay {
     display: none;
+  }
+  .video-container {
+    max-width: 100%;
   }
 }
 
@@ -122,6 +134,9 @@
   .division-overlay {
     display: flex;
   }
+  .video-container {
+    max-width: 75vw;
+  }
 }
 @media (min-width: 1440px) {
   .division-card {
@@ -134,5 +149,8 @@
   }
   .division-overlay {
     display: flex;
+  }
+  .video-container {
+    max-width: 75vw;
   }
 }

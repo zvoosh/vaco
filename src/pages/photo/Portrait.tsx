@@ -1,24 +1,26 @@
 import image from "../../assets/tara.jpg";
+import image2 from "../../assets/portrait.jpg";
 import "../../styles/portrait.scss";
 import { CiFacebook, CiInstagram, CiMail, CiYoutube } from "react-icons/ci";
 import { useContext } from "react";
 import { MyContext } from "../../services";
+import { Image } from "antd";
 
 const images = [
   { src: image, alt: "image1", description: "vale's image" },
-  { src: image, alt: "image", description: "web's image" },
-  { src: image, alt: "image1", description: "vale's image" },
-  { src: image, alt: "image", description: "web's image" },
-  { src: image, alt: "image1", description: "vale's image" },
-  { src: image, alt: "image", description: "web's image" },
-  { src: image, alt: "image1", description: "vale's image" },
-  { src: image, alt: "image", description: "web's image" },
-  { src: image, alt: "image1", description: "vale's image" },
-  { src: image, alt: "image", description: "web's image" },
-  { src: image, alt: "image1", description: "vale's image" },
-  { src: image, alt: "image", description: "web's image" },
-  { src: image, alt: "image1", description: "vale's image" },
-  { src: image, alt: "image", description: "web's image" },
+  { src: image2, alt: "image", description: "web's image" },
+  { src: image2, alt: "image21", description: "vale's image2" },
+  { src: image2, alt: "image2", description: "web's image2" },
+  { src: image2, alt: "image21", description: "vale's image2" },
+  { src: image2, alt: "image2", description: "web's image2" },
+  { src: image2, alt: "image21", description: "vale's image2" },
+  { src: image2, alt: "image2", description: "web's image2" },
+  { src: image2, alt: "image21", description: "vale's image2" },
+  { src: image2, alt: "image2", description: "web's image2" },
+  { src: image2, alt: "image21", description: "vale's image2" },
+  { src: image2, alt: "image2", description: "web's image2" },
+  { src: image2, alt: "image21", description: "vale's image2" },
+  { src: image2, alt: "image2", description: "web's image" },
   { src: image, alt: "image1", description: "vale's image" },
   { src: image, alt: "image", description: "web's image" },
   { src: image, alt: "image1", description: "vale's image" },
@@ -48,31 +50,33 @@ const PortraitPage = () => {
         <div className="w-100 h-100 flex justify-center">
           {!ctx?.value && (
             <div className="card-grid">
-              {images.map((element, index) => (
-                <div
-                  key={index}
-                  className="card"
-                  onClick={() => {
-                    ctx?.setValue(true);
-                    ctx?.setIndex(index);
-                  }}
-                >
-                  <img
+              <Image.PreviewGroup
+                preview={{
+                  onChange: (current, prev) =>
+                    console.log(
+                      `current index: ${current}, prev index: ${prev}`
+                    ),
+                }}
+              >
+                {images.map((element, index) => (
+                  <Image
                     src={element.src}
                     alt={element.alt}
                     className="responsive"
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                    }}
                   />
-                  <div className="overlay">
-                    <p className="overlay-text">{element.description}</p>
-                  </div>
-                </div>
-              ))}
+                ))}
+              </Image.PreviewGroup>
             </div>
           )}
           {ctx?.value && typeof ctx.index === "number" && (
             <div className="w-100 h-100 flex justify-center">
-              <div className="mt-5 pl-2 pr-2 ">
-                <div style={{ maxWidth: "1600px" }}>
+              <div className="mt-5 ">
+                <div className="big-image-container">
                   <img
                     key={ctx.index}
                     src={images[ctx.index].src}
