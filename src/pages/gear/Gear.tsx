@@ -10,7 +10,7 @@ const GearPage = () => {
             <div className="font-20 normal-font pb-2 text-white w-100">
               Gear
             </div>
-            <div className="pb-2 content-font">
+            <div className="pb-2 normal-font font-12">
               <div className="pb-1">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Aspernatur magnam non itaque beatae, facilis sit? Cum odit ad

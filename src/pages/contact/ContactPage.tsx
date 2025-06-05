@@ -27,7 +27,7 @@ const ContactPage = () => {
               </div>
             </div>
           </div>
-          <div className="h-50 text-gray line-spacing-11 font-12 pb-5 container-text">
+          <div className="h-50 text-gray line-spacing-11 font-12 pb-5 container-text normal-text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
             corrupti temporibus expedita voluptates deserunt itaque aperiam
             aspernatur excepturi, odio magni. Ut perferendis nam quam ullam

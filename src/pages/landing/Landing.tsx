@@ -12,7 +12,7 @@ const LandingPage = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="w-100 h-100 bg-black text-white flex">
+    <div className="w-100 h-100 bg-black text-white flex header-font">
       <div className="landing-carousel">
         <Carousel autoplay dots={false} className="carousel">
           <img src={image} alt="Image 1" />

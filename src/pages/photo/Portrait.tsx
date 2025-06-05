@@ -116,7 +116,7 @@ const PortraitPage = () => {
         </div>
       </div>
       {!ctx?.value && (
-        <div className="text-white pt-2 pl-2 pb-2">
+        <div className="text-white pt-2 pl-3 pb-2">
           <CiMail className="mr-2" style={{ transform: "scale(2)" }} />
           <CiFacebook className="mr-2" style={{ transform: "scale(2)" }} />
           <CiInstagram className="mr-2" style={{ transform: "scale(2)" }} />

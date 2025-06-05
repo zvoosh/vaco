@@ -1,4 +1,4 @@
-import { useLocation, useNavigate, useParams } from "react-router";
+import { useLocation, useNavigate } from "react-router";
 import "../styles/header.scss";
 import { useContext, useEffect, useState } from "react";
 import { MyContext } from "../services";
@@ -8,7 +8,6 @@ const Header = () => {
   const ctx = useContext(MyContext);
   const navigate = useNavigate();
   const location = useLocation();
-  const { client } = useParams();
 
   useEffect(() => {
     console.log(location.pathname);

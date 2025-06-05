@@ -5,7 +5,7 @@ import { CiFacebook, CiInstagram, CiMail, CiYoutube } from "react-icons/ci";
 
 const FeaturePage = () => {
   return (
-    <div className="w-100 h-100 text-gray">
+    <div className="w-100 h-100 text-gray normal-font font-12">
       <div className="flex w-100 h-100 flex-column">
         <div className="video-thumbnail">
           <img

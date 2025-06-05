@@ -36,14 +36,14 @@ const ClientDetailsPage = () => {
   };
 
   return (
-    <div className="w-100 h-100 text-gray">
+    <div className="w-100 h-100 text-gray ">
       <div className="flex justify-center w-100 h-100">
         <div className="client-details-container">
           <div>
             <div className="font-20 normal-font pb-2 text-white w-100">
               {client}
             </div>
-            <div className="pb-2 content-font">
+            <div className="pb-2 normal-font font-12">
               <div className="pb-1">
                 "The world will not be destroyed by those who do evil, but by
                 those who watch them without doing anything." - Albert Einstein

@@ -67,7 +67,7 @@ const ClientsPage = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="pt-2 pb-2 text-gray w-100 h-100 flex flex-column">
+    <div className="pt-2 pb-2 text-gray w-100 h-100 flex flex-column normal-font font-12">
       <div className="thumbnail">
         <img
           src={image2}
