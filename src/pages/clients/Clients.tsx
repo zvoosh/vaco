@@ -1,5 +1,4 @@
 import { useNavigate } from "react-router";
-import { CiFacebook, CiInstagram, CiMail, CiYoutube } from "react-icons/ci";
 import image from "../../assets/prva.jpg";
 import image2 from "../../assets/road.jpg";
 import "../../styles/clients.scss";
@@ -51,7 +50,7 @@ const ClientsPage = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="pt-2 pb-2 text-gray w-100 h-100 flex flex-column normal-font font-12">
+    <div className=" pb-2 text-gray w-100 h-100 flex flex-column normal-font font-12">
       <div className="thumbnail">
         <img
           src={image2}
@@ -92,12 +91,6 @@ const ClientsPage = () => {
               </div>
             ))}
 
-            <div className="text-white pt-2 pl-2 pb-2">
-              <CiMail className="mr-2" style={{ transform: "scale(2)" }} />
-              <CiFacebook className="mr-2" style={{ transform: "scale(2)" }} />
-              <CiInstagram className="mr-2" style={{ transform: "scale(2)" }} />
-              <CiYoutube className="mr-2" style={{ transform: "scale(2)" }} />
-            </div>
           </div>
         </div>
       </div>

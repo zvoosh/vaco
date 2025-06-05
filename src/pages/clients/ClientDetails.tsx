@@ -4,7 +4,6 @@ import "../../styles/event.scss";
 import "../../styles/clients.scss";
 import { useParams } from "react-router";
 import { useRef, useState } from "react";
-import { CiFacebook, CiInstagram, CiMail, CiYoutube } from "react-icons/ci";
 
 const videoSources = [{ src: video }, { src: video }, { src: video }];
 
@@ -83,12 +82,6 @@ const ClientDetailsPage = () => {
                 </div>
               ))}
             </Carousel>
-            <div className="text-white pl-2 pb-2">
-              <CiMail className="mr-2" style={{ transform: "scale(2)" }} />
-              <CiFacebook className="mr-2" style={{ transform: "scale(2)" }} />
-              <CiInstagram className="mr-2" style={{ transform: "scale(2)" }} />
-              <CiYoutube className="mr-2" style={{ transform: "scale(2)" }} />
-            </div>
           </div>
         </div>
       </div>

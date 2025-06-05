@@ -1,5 +1,4 @@
 import video from "../../assets/9535416-uhd_3840_2160_30fps.mp4";
-import { CiFacebook, CiInstagram, CiMail, CiYoutube } from "react-icons/ci";
 
 const BehindTheSceensPage = () => {
   return (
@@ -43,12 +42,6 @@ const BehindTheSceensPage = () => {
                 <source src={video} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
-            </div>
-            <div className="text-white pb-2">
-              <CiMail className="mr-2" style={{ transform: "scale(2)" }} />
-              <CiFacebook className="mr-2" style={{ transform: "scale(2)" }} />
-              <CiInstagram className="mr-2" style={{ transform: "scale(2)" }} />
-              <CiYoutube className="mr-2" style={{ transform: "scale(2)" }} />
             </div>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import { CiFacebook, CiInstagram, CiMail, CiYoutube } from "react-icons/ci";
+
 import img from "../../assets/unnamed.jpg";
 import "../../styles/contact.scss";
 
@@ -50,8 +50,6 @@ const ContactPage = () => {
             molestias cumque praesentium quidem laborum delectus dolore nesciunt
             voluptatem animi doloribus eaque ad aliquam, deserunt corporis
           </div>
-
-          <div className="text-white pl-2 pb-2" ><CiMail className="mr-2" style={{transform: "scale(2)"}}/><CiFacebook className="mr-2"  style={{transform: "scale(2)"}}/><CiInstagram className="mr-2"  style={{transform: "scale(2)"}}/><CiYoutube className="mr-2"  style={{transform: "scale(2)"}}/></div>
         </div>
       </div>
     </div>

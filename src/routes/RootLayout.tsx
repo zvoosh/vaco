@@ -11,7 +11,7 @@ const RootLayout = () => {
         height: "100vh",
         backgroundColor: "#252628",
         overflowX: "hidden",
-        overflowY: 'auto',
+        overflowY: "auto",
       }}
       className="scrollable-div"
     >

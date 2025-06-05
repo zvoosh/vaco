@@ -6,7 +6,6 @@ import image5 from "../../assets/portrait.jpg";
 import "../../styles/event.scss";
 import { useContext } from "react";
 import { MyContext } from "../../services";
-import { CiFacebook, CiInstagram, CiMail, CiYoutube } from "react-icons/ci";
 import { Image } from "antd";
 
 const images = [
@@ -97,14 +96,6 @@ const EventPage = () => {
           )}
         </div>
       </div>
-      {!ctx?.value && (
-        <div className="text-white pt-2 pl-3 pb-2">
-          <CiMail className="mr-2" style={{ transform: "scale(2)" }} />
-          <CiFacebook className="mr-2" style={{ transform: "scale(2)" }} />
-          <CiInstagram className="mr-2" style={{ transform: "scale(2)" }} />
-          <CiYoutube className="mr-2" style={{ transform: "scale(2)" }} />
-        </div>
-      )}
     </div>
   );
 };

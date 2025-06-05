@@ -8,18 +8,14 @@ import {
   BehindTheSceensPage,
   ClientDetailsPage,
   ClientsPage,
-  CommercialPage,
   ContactPage,
   CoorporatePage,
-  DocumentaryPage,
   EventPage,
   FeaturePage,
   GearPage,
   LandingPage,
   PhotoPage,
   PortraitPage,
-  VideoCoorporatePage,
-  VideoEventPage,
   VideoPage,
 } from "./pages";
 
@@ -43,10 +39,10 @@ function App() {
           <Route path="/airial" element={<AirialPage />} />
           <Route path="/video" element={<VideoPage />} />
           <Route path="/video-feature" element={<FeaturePage />} />
-          <Route path="/video-documentary" element={<DocumentaryPage />} />
-          <Route path="/video-event" element={<VideoEventPage />} />
-          <Route path="/video-commercial" element={<CommercialPage />} />
-          <Route path="/video-coorporate" element={<VideoCoorporatePage />} />
+          <Route path="/video-documentary" element={<FeaturePage />} />
+          <Route path="/video-event" element={<FeaturePage />} />
+          <Route path="/video-commercial" element={<FeaturePage />} />
+          <Route path="/video-coorporate" element={<FeaturePage />} />
           <Route path="/behind-the-sceens" element={<BehindTheSceensPage />} />
           <Route path="/gear" element={<GearPage />} />
         </Route>
