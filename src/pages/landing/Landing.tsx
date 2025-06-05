@@ -14,7 +14,7 @@ const LandingPage = () => {
   return (
     <div className="landing-wrapper header-font" style={{ overflow: "hidden" }}>
       <div className="landing-carousel">
-        <Carousel autoplay dots={false} className="carousel">
+        <Carousel autoplay dots={false} className="carousel" pauseOnHover={false}>
           <img src={image} alt="Image 1" />
           <img src={image2} alt="Image 2" />
           <img src={image3} alt="Image 3" />
