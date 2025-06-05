@@ -26,13 +26,11 @@ const ClientDetailsPage = () => {
   const { client } = useParams();
 
   const handleVideoPlaying = () => {
-    console.log("Video is playing");
     setVideoPlaying(true);
     carouselRef.current?.slickPause();
   };
 
   const handleVideoPauseOrEnd = () => {
-    console.log("Video is paused or ended");
     setVideoPlaying(false);
     carouselRef.current?.slickPlay();
   };

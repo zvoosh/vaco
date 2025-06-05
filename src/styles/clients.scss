@@ -167,7 +167,7 @@
 @media (min-width: 1024px) {
 
   .client-details-container {
-    width: 1330px;
+    width: 100%;
     padding: 4rem;
   }
   .thumbnail {
@@ -219,6 +219,7 @@
 @media (min-width: 1440px) {
   .client-details-container {
     width: 1330px;
+    height: 100%;
     padding: 4rem;
   }
   .thumbnail {

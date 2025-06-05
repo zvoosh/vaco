@@ -5,10 +5,10 @@ const BehindTheSceensPage = () => {
   return (
     <div className="w-100 h-100 text-gray">
       <div className="flex justify-center w-100 h-100">
-        <div className="client-details-container">
+        <div className="basic-container">
           <div>
             <div className="font-20 normal-font pb-2 text-white w-100">
-              BEHIND THE SCEENS
+              Behind the sceens
             </div>
             <div className="pb-2 content-font">
               <div className="pb-1">
@@ -44,7 +44,7 @@ const BehindTheSceensPage = () => {
                 Your browser does not support the video tag.
               </video>
             </div>
-            <div className="text-white pl-2 pb-2">
+            <div className="text-white pb-2">
               <CiMail className="mr-2" style={{ transform: "scale(2)" }} />
               <CiFacebook className="mr-2" style={{ transform: "scale(2)" }} />
               <CiInstagram className="mr-2" style={{ transform: "scale(2)" }} />

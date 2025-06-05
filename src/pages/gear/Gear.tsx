@@ -1,10 +1,11 @@
 import { CiFacebook, CiInstagram, CiMail, CiYoutube } from "react-icons/ci";
+import "../../styles/gear.scss";
 
 const GearPage = () => {
   return (
     <div className="w-100 h-100 text-gray">
       <div className="flex justify-center w-100 h-100">
-        <div className="client-details-container">
+        <div className="basic-container">
           <div>
             <div className="font-20 normal-font pb-2 text-white w-100">
               Gear
@@ -35,7 +36,7 @@ const GearPage = () => {
                 in adipisci, placeat provident omnis minima dicta beatae!
               </div>
             </div>
-            <div className="text-white pl-2 pb-2">
+            <div className="text-white  pb-2">
               <CiMail className="mr-2" style={{ transform: "scale(2)" }} />
               <CiFacebook className="mr-2" style={{ transform: "scale(2)" }} />
               <CiInstagram className="mr-2" style={{ transform: "scale(2)" }} />
