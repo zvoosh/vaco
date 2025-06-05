@@ -60,18 +60,6 @@ const ClientDetailsPage = () => {
                 ever before. We have caused global warming at a record pace,
                 endangering our own existence.
               </div>
-              <div className="pb-1">
-                We have cut trees and destroyed forests more than ever before,
-                polluted air, water, and soil. We have created an island of
-                waste, the size of the state of Texas, in the middle of the
-                ocean. We have caused the 4th mass animal extinction.
-                Three-quarters of Earth’s land surface is under pressure from
-                human activity. In just 2.5 seconds we’ve turned the planet into
-                our own personal factory. It took almost 4.5 billion years of
-                evolution for us to exist and we have changed so much in so
-                little time. The problem is us. And it is up to us if we want to
-                make it to 3 seconds.
-              </div>
             </div>
             <Carousel
               autoplay={!videoPlaying}

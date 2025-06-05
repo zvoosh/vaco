@@ -13,11 +13,7 @@ const card = [
                 From its inception until December 2009, it was majority-owned by
                 the global media conglomerate News Corporation (News Corp),
                 which attached its Fox brand to the operation, naming Dan Bates
-                as the CEO. During its time under News Corporation, Fox
-                televizija closely co-operated with News Corporation–owned
-                networks in neighbouring countries, such as bTV in Bulgaria and
-                Fox Turkey, sharing production capabilities on specific projects
-                and making use of their experienced staff.`,
+                as the CEO. `,
   },
   {
     image: image,
@@ -27,11 +23,7 @@ const card = [
                 From its inception until December 2009, it was majority-owned by
                 the global media conglomerate News Corporation (News Corp),
                 which attached its Fox brand to the operation, naming Dan Bates
-                as the CEO. During its time under News Corporation, Fox
-                televizija closely co-operated with News Corporation–owned
-                networks in neighbouring countries, such as bTV in Bulgaria and
-                Fox Turkey, sharing production capabilities on specific projects
-                and making use of their experienced staff.`,
+                as the CEO. `,
   },
   {
     image: image,
@@ -41,11 +33,7 @@ const card = [
                 From its inception until December 2009, it was majority-owned by
                 the global media conglomerate News Corporation (News Corp),
                 which attached its Fox brand to the operation, naming Dan Bates
-                as the CEO. During its time under News Corporation, Fox
-                televizija closely co-operated with News Corporation–owned
-                networks in neighbouring countries, such as bTV in Bulgaria and
-                Fox Turkey, sharing production capabilities on specific projects
-                and making use of their experienced staff.`,
+                as the CEO. `,
   },
   {
     image: image,
@@ -55,11 +43,7 @@ const card = [
                 From its inception until December 2009, it was majority-owned by
                 the global media conglomerate News Corporation (News Corp),
                 which attached its Fox brand to the operation, naming Dan Bates
-                as the CEO. During its time under News Corporation, Fox
-                televizija closely co-operated with News Corporation–owned
-                networks in neighbouring countries, such as bTV in Bulgaria and
-                Fox Turkey, sharing production capabilities on specific projects
-                and making use of their experienced staff.`,
+                as the CEO. `,
   },
 ];
 

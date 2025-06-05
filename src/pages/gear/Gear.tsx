@@ -26,15 +26,6 @@ const GearPage = () => {
                 iste voluptas veritatis quae eius! Repellendus harum similique
                 omnis impedit?
               </div>
-              <div className="pb-1">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-                nemo non repudiandae hic voluptatibus! Quae, delectus doloribus?
-                Consequatur reprehenderit officia pariatur, ratione consequuntur
-                cumque ipsam distinctio. Dolor obcaecati cum maiores, est nemo
-                esse, dolorem eveniet non delectus facilis iste iusto fugiat,
-                facere illum sequi quae fugit in. Quae quo iusto excepturi qui,
-                in adipisci, placeat provident omnis minima dicta beatae!
-              </div>
             </div>
             <div className="text-white  pb-2">
               <CiMail className="mr-2" style={{ transform: "scale(2)" }} />

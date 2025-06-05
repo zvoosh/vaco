@@ -49,42 +49,6 @@ const ContactPage = () => {
             sapiente deleniti rerum adipisci, expedita commodi perspiciatis
             molestias cumque praesentium quidem laborum delectus dolore nesciunt
             voluptatem animi doloribus eaque ad aliquam, deserunt corporis
-            dolorum perferendis excepturi. Cum nam dolorum vitae quam? Facilis
-            itaque est aperiam harum unde non odio. Ipsum omnis iste eum, dicta,
-            ea qui temporibus est provident totam fuga iure aspernatur,
-            repellendus tenetur aliquam earum. Modi libero magni aliquam. Iste
-            nisi dolores officia ducimus voluptas dolor nam quibusdam eaque
-            accusantium hic fuga, nihil porro quasi quisquam rerum repudiandae
-            fugit at iusto non praesentium dolorem facere enim sequi? Quidem
-            sapiente expedita itaque veniam temporibus cupiditate officiis modi,
-            consectetur error perferendis sint dolorem tempore minus ut eveniet
-            cum ipsam quia neque dolorum nemo, tenetur, odio harum repellendus
-            aspernatur! Quasi optio dolore ratione recusandae. Nobis explicabo
-            excepturi a magnam architecto enim harum possimus assumenda amet,
-            nemo odio accusantium, fuga illo delectus officia dolorem deserunt
-            aliquam corporis molestiae. Debitis enim iure molestias dicta ad
-            quod fugiat dolore magnam laudantium eveniet, quae temporibus
-            dignissimos possimus atque doloribus ducimus non esse cum eligendi!
-            Inventore quo enim, nemo sunt quibusdam quia officia dolore dolorum
-            maiores laboriosam expedita, ab distinctio nam quas optio nulla
-            quaerat non repellendus, omnis explicabo? Provident tempora placeat
-            et! Cumque ea facilis a officiis rem, voluptatibus accusantium nulla
-            quasi commodi odit magni. Possimus, asperiores. Eum rem perspiciatis
-            quis magni unde distinctio, molestias accusamus tempora natus hic
-            velit laudantium consectetur delectus debitis commodi est laborum
-            rerum incidunt officia vitae neque? Ipsa ullam quidem odio, in
-            deleniti expedita fugiat praesentium blanditiis porro animi enim
-            eveniet quisquam dolorum quibusdam cum vel? Cumque, voluptatem
-            maxime at quia ullam quo rerum quaerat et. Odit facilis cupiditate
-            nostrum doloribus impedit? Beatae fugit consequuntur quaerat minima
-            vel recusandae, veritatis impedit soluta aspernatur placeat amet
-            nesciunt esse quidem exercitationem cupiditate! Voluptas rem porro
-            fugit totam aspernatur harum ut ipsa maxime, odio cumque tempora
-            quos laborum enim beatae pariatur! Libero quisquam omnis minima
-            minus amet. Non necessitatibus aspernatur veniam eum nobis ratione
-            aliquam itaque quis adipisci facilis, molestias esse delectus
-            consequuntur dolore voluptates temporibus quaerat labore eos quo
-            enim expedita ipsa! Soluta ipsam sapiente blanditiis ratione?
           </div>
 
           <div className="text-white pl-2 pb-2" ><CiMail className="mr-2" style={{transform: "scale(2)"}}/><CiFacebook className="mr-2"  style={{transform: "scale(2)"}}/><CiInstagram className="mr-2"  style={{transform: "scale(2)"}}/><CiYoutube className="mr-2"  style={{transform: "scale(2)"}}/></div>
