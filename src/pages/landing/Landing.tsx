@@ -12,7 +12,7 @@ const LandingPage = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="w-100 h-100 bg-black text-white flex header-font" style={{overflow: "hidden"}}>
+    <div className="landing-wrapper header-font" style={{ overflow: "hidden" }}>
       <div className="landing-carousel">
         <Carousel autoplay dots={false} className="carousel">
           <img src={image} alt="Image 1" />
@@ -22,13 +22,17 @@ const LandingPage = () => {
       </div>
 
       <div className="landing-headline">
-        <div className="w-100 text-center mt-3 font-20" style={{letterSpacing: ".5rem"}}>VACO</div>
+        <div
+          className="w-100 text-center mt-3 font-20"
+          style={{ letterSpacing: ".5rem" }}
+        >
+          VACO
+        </div>
         <div className="w-100 text-center">
           <ReactTyped
             strings={["Live to tell stories"]}
             className="font-16 uppercase pb-1"
             typeSpeed={100}
-            loop
           />
           <div className="uppercase italic pb-1">
             Photographer & storyteller
@@ -38,13 +42,14 @@ const LandingPage = () => {
               className=" mt-1 landing-btn"
               onClick={() => {
                 navigate("/video");
+                console.log("clicked")
               }}
             >
               View work
             </div>
           </div>
         </div>
-        <div className="text-white mb-5">
+        <div className="text-white mb-2">
           <CiMail className="mr-2" style={{ transform: "scale(2)" }} />
           <CiFacebook className="mr-2" style={{ transform: "scale(2)" }} />
           <CiInstagram className="mr-2" style={{ transform: "scale(2)" }} />

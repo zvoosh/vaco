@@ -39,31 +39,122 @@
   height: 100%;
   object-fit: cover;
 }
+.landing-wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+}
 
 @media (max-width: 479px) {
   .landing-carousel {
-    display: none;
+    display: block;
   }
   .landing-headline {
     width: 100%;
+  }
+  .landing-carousel {
+    display: block;
+    width: 100vw;
+    height: 50vh;
+  }
+  .carousel {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .carousel div {
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+  }
+  .carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .landing-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: #252628;
+    color: white;
+    display: flex;
+    flex-direction: column;
   }
 }
 
 @media (min-width: 480px) {
   .landing-carousel {
-    display: none;
+    display: block;
   }
   .landing-headline {
     width: 100%;
+  }
+  .landing-carousel {
+    display: block;
+    width: 100vw;
+    height: 50vh;
+  }
+  .carousel {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .carousel div {
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+  }
+  .carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .landing-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: #252628;
+    color: white;
+    display: flex;
+    flex-direction: column;
   }
 }
 
 @media (min-width: 768px) {
   .landing-carousel {
-    display: none;
+    display: block;
   }
   .landing-headline {
     width: 100%;
+  }
+  .landing-carousel {
+    display: block;
+    width: 100vw;
+    height: 50vh;
+  }
+  .carousel {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .carousel div {
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+  }
+  .carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .landing-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: #252628;
+    color: white;
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -72,8 +163,44 @@
     display: block;
   }
   .landing-headline {
-    width: 50%;
+    width: 100%;
+  }
+  .landing-carousel {
+    display: block;
+    width: 50vw;
+    height: 100vh;
+  }
+  .carousel {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .carousel div {
+    width: 50vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .landing-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: #252628;
+    color: white;
+    display: flex;
+    flex-direction: row;
   }
 }
 @media (min-width: 1440px) {
+  .landing-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: #252628;
+    color: white;
+    display: flex;
+    flex-direction: row;
+  }
 }
