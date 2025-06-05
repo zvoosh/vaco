@@ -1,39 +1,86 @@
 import "../../styles/portrait.scss";
+import tara from "../../assets/tara.jpg";
+import baloons from "../../assets/baloons.jpg";
+import mountain from "../../assets/mountain.jpg";
+import portrait from "../../assets/portrait.jpg";
+import cowboy from "../../assets/cowboy.jpg";
+import dunes from "../../assets/dunes.jpg";
+import goalkeeper from "../../assets/goalkeeper.jpg";
 import { useContext } from "react";
 import { MyContext } from "../../services";
 import { Image } from "antd";
 
 const images = [
-  { src: 'src/assets/tara.jpg', alt: "image1", description: "vale's image" },
-  { src: 'src/assets/portrait.jpg', alt: "image", description: "web's image" },
-  { src: 'src/assets/baloons.jpg', alt: "image1", description: "vale's image" },
-  { src: 'src/assets/cowboy.jpg', alt: "image", description: "web's image" },
-  { src: 'src/assets/dunes.jpg', alt: "image1", description: "vale's image" },
-  { src: 'src/assets/goalkeeper.jpg', alt: "image", description: "web's image" },
-  { src: 'src/assets/mountain.jpg', alt: "image1", description: "vale's image" },
-  { src: 'src/assets/mountins.jpg', alt: "image", description: "web's image" },
-  { src: 'src/assets/unnamed.jpg', alt: "image1", description: "vale's image" },
-  { src: 'src/assets/color_wheel.jpg', alt: "image", description: "web's image" },
-  { src: 'src/assets/tara.jpg', alt: "image1", description: "vale's image" },
-  { src: 'src/assets/portrait.jpg', alt: "image", description: "web's image" },
-  { src: 'src/assets/baloons.jpg', alt: "image1", description: "vale's image" },
-  { src: 'src/assets/cowboy.jpg', alt: "image", description: "web's image" },
-  { src: 'src/assets/dunes.jpg', alt: "image1", description: "vale's image" },
-  { src: 'src/assets/goalkeeper.jpg', alt: "image", description: "web's image" },
-  { src: 'src/assets/mountain.jpg', alt: "image1", description: "vale's image" },
-  { src: 'src/assets/mountins.jpg', alt: "image", description: "web's image" },
-  { src: 'src/assets/unnamed.jpg', alt: "image1", description: "vale's image" },
-  { src: 'src/assets/color_wheel.jpg', alt: "image", description: "web's image" },
-  { src: 'src/assets/tara.jpg', alt: "image1", description: "vale's image" },
-  { src: 'src/assets/portrait.jpg', alt: "image", description: "web's image" },
-  { src: 'src/assets/baloons.jpg', alt: "image1", description: "vale's image" },
-  { src: 'src/assets/cowboy.jpg', alt: "image", description: "web's image" },
-  { src: 'src/assets/dunes.jpg', alt: "image1", description: "vale's image" },
-  { src: 'src/assets/goalkeeper.jpg', alt: "image", description: "web's image" },
-  { src: 'src/assets/mountain.jpg', alt: "image1", description: "vale's image" },
-  { src: 'src/assets/mountins.jpg', alt: "image", description: "web's image" },
-  { src: 'src/assets/unnamed.jpg', alt: "image1", description: "vale's image" },
-  { src: 'src/assets/color_wheel.jpg', alt: "image", description: "web's image" },
+  { src: tara, alt: "image1", description: "vale's image" },
+  { src: portrait, alt: "image", description: "web's image" },
+  { src: baloons, alt: "image1", description: "vale's image" },
+  { src: cowboy, alt: "image", description: "web's image" },
+  { src: dunes, alt: "image1", description: "vale's image" },
+  {
+    src: goalkeeper,
+    alt: "image",
+    description: "web's image",
+  },
+  {
+    src: mountain,
+    alt: "image1",
+    description: "vale's image",
+  },
+  { src: tara, alt: "image1", description: "vale's image" },
+  { src: portrait, alt: "image", description: "web's image" },
+  { src: baloons, alt: "image1", description: "vale's image" },
+  { src: cowboy, alt: "image", description: "web's image" },
+  { src: dunes, alt: "image1", description: "vale's image" },
+  {
+    src: goalkeeper,
+    alt: "image",
+    description: "web's image",
+  },
+  {
+    src: mountain,
+    alt: "image1",
+    description: "vale's image",
+  },
+  {
+    src: mountain,
+    alt: "image1",
+    description: "vale's image",
+  },
+  { src: tara, alt: "image1", description: "vale's image" },
+  { src: portrait, alt: "image", description: "web's image" },
+  { src: baloons, alt: "image1", description: "vale's image" },
+  { src: cowboy, alt: "image", description: "web's image" },
+  { src: dunes, alt: "image1", description: "vale's image" },
+  {
+    src: goalkeeper,
+    alt: "image",
+    description: "web's image",
+  },
+  {
+    src: mountain,
+    alt: "image1",
+    description: "vale's image",
+  },
+  { src: tara, alt: "image1", description: "vale's image" },
+  { src: portrait, alt: "image", description: "web's image" },
+  { src: baloons, alt: "image1", description: "vale's image" },
+  { src: cowboy, alt: "image", description: "web's image" },
+  { src: dunes, alt: "image1", description: "vale's image" },
+  {
+    src: goalkeeper,
+    alt: "image",
+    description: "web's image",
+  },
+  {
+    src: mountain,
+    alt: "image1",
+    description: "vale's image",
+  },
+  {
+    src: mountain,
+    alt: "image1",
+    description: "vale's image",
+  },
 ];
 
 const PortraitPage = () => {
