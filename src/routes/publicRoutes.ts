@@ -11,10 +11,6 @@ import {
   FeaturePage,
   VideoPage,
   PhotoPage,
-  DocumentaryPage,
-  VideoCoorporatePage,
-  CommercialPage,
-  VideoEventPage,
   BehindTheSceensPage,
   GearPage,
 } from "../pages";
@@ -69,22 +65,6 @@ export let router = createBrowserRouter(
         {
           path: "video-feature",
           Component: FeaturePage,
-        },
-        {
-          path: "video-documentary",
-          Component: DocumentaryPage,
-        },
-        {
-          path: "video-event",
-          Component: VideoEventPage,
-        },
-        {
-          path: "video-commercial",
-          Component: CommercialPage,
-        },
-        {
-          path: "video-coorporate",
-          Component: VideoCoorporatePage,
         },
         {
           path: "behind-the-sceens",

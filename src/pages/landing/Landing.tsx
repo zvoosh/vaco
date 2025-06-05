@@ -12,7 +12,7 @@ const LandingPage = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="w-100 h-100 bg-black text-white flex header-font">
+    <div className="w-100 h-100 bg-black text-white flex header-font" style={{overflow: "hidden"}}>
       <div className="landing-carousel">
         <Carousel autoplay dots={false} className="carousel">
           <img src={image} alt="Image 1" />
@@ -44,7 +44,7 @@ const LandingPage = () => {
             </div>
           </div>
         </div>
-        <div className="text-white mb-3">
+        <div className="text-white mb-5">
           <CiMail className="mr-2" style={{ transform: "scale(2)" }} />
           <CiFacebook className="mr-2" style={{ transform: "scale(2)" }} />
           <CiInstagram className="mr-2" style={{ transform: "scale(2)" }} />
