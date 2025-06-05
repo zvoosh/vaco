@@ -14,7 +14,7 @@ const LandingPage = () => {
   return (
     <div className="landing-wrapper header-font" style={{ overflow: "hidden" }}>
       <div className="landing-carousel">
-        <Carousel autoplay dots={false} className="carousel" pauseOnHover={false}>
+        <Carousel autoplay dots={false} className="carousel" pauseOnHover={false} draggable={false}>
           <img src={image} alt="Image 1" />
           <img src={image2} alt="Image 2" />
           <img src={image3} alt="Image 3" />
@@ -31,7 +31,7 @@ const LandingPage = () => {
         <div className="w-100 text-center">
           <ReactTyped
             strings={["Live to tell stories"]}
-            className="font-16 uppercase pb-1"
+            className="font-14 uppercase pb-2"
             typeSpeed={100}
           />
           <div className="uppercase italic pb-1">
