@@ -37,6 +37,7 @@ const CoorporatePage = () => {
               >
                 {images.map((element, index) => (
                   <Image
+                    loading="eager"
                     key={index}
                     src={element.src}
                     alt={element.alt}
@@ -46,44 +47,7 @@ const CoorporatePage = () => {
               </Image.PreviewGroup>
             </div>
           )}
-          {ctx?.value && typeof ctx.index === "number" && (
-            <div className="w-100 h-100 flex justify-center">
-              <div className="mt-5 pl-2 pr-2 ">
-                <div style={{ maxWidth: "900px" }}>
-                  <img loading="lazy"
-                    key={ctx.index}
-                    src={images[ctx.index].src}
-                    alt={images[ctx.index].alt}
-                    className="w-100 h-auto object-cover fade-in-on-load"
-                    sizes="(max-width: 480px) 480px, (max-width: 800px) 800px, 1200px"
-                  />
-                </div>
-                <div className="text-white w-100 flex justify-center mt-5 pt-1 align-center  font-12 ">
-                  <span
-                    className="pointer user-none"
-                    onClick={() => {
-                      ctx.setIndex((prevIndex) =>
-                        prevIndex === 0 ? images.length - 1 : prevIndex! - 1
-                      );
-                    }}
-                  >
-                    prev
-                  </span>
-                  <span>&nbsp;/&nbsp;</span>
-                  <span
-                    className="pointer user-none"
-                    onClick={() => {
-                      ctx.setIndex((prevIndex) =>
-                        prevIndex === images.length - 1 ? 0 : prevIndex! + 1
-                      );
-                    }}
-                  >
-                    next
-                  </span>
-                </div>
-              </div>
-            </div>
-          )}
+          
         </div>
       </div>
     </div>

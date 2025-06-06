@@ -21,9 +21,9 @@ const LandingPage = () => {
           pauseOnHover={false}
           draggable={false}
         >
-          <img src={image} alt="Image 1" />
-          <img src={image2} alt="Image 2" />
-          <img src={image3} alt="Image 3" />
+          <img loading="eager" src={image} alt="Image 1" />
+          <img loading="eager" src={image2} alt="Image 2" />
+          <img loading="eager" src={image3} alt="Image 3" />
         </Carousel>
       </div>
 

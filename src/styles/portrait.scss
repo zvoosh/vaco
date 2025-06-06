@@ -60,12 +60,27 @@
   max-width: 100%;
 }
 
+@media (max-width: 479px) {
+  .card-grid {
+    display: grid;
+    width: 100%;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, 100%);
+    grid-auto-rows: 300px;
+    padding: 20px;
+    justify-content: center;
+  }
+  .big-image-container {
+    max-width: 100%;
+  }
+}
+
 @media (min-width: 480px) {
   .card-grid {
     display: grid;
     width: 100%;
     gap: 10px;
-    grid-template-columns: repeat(auto-fit, 450px);
+    grid-template-columns: repeat(auto-fit, 100%);
     grid-auto-rows: 450px;
     padding: 20px;
     justify-content: center;

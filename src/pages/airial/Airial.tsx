@@ -118,6 +118,7 @@ const AirialPage = () => {
                 className="w-100 h-auto object-cover fade-in-on-load"
                 controls
                 autoPlay
+                muted
                 preload="auto"
               >
                 <source src={video} typeof="video/mp4" />
