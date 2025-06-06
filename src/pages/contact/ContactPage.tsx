@@ -9,7 +9,7 @@ const ContactPage = () => {
         <div className="container">
           <div className="container-info">
             <div className="image-container">
-              <img src={img} alt="image" className="image" />
+              <img loading="lazy" src={img} alt="image" className="image" />
             </div>
             <div className="ml-2 font-10 text-white flex flex-column justify-center info">
               <div className="">

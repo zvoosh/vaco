@@ -19,6 +19,7 @@ const AirialPage = () => {
             }}
           >
             <img
+              loading="lazy"
               src={image3}
               alt="image"
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
@@ -34,6 +35,7 @@ const AirialPage = () => {
             }}
           >
             <img
+              loading="lazy"
               src={image2}
               alt="image"
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
@@ -49,6 +51,7 @@ const AirialPage = () => {
             }}
           >
             <img
+              loading="lazy"
               src={image}
               alt="image"
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
@@ -64,6 +67,7 @@ const AirialPage = () => {
             }}
           >
             <img
+              loading="lazy"
               src={image2}
               alt="image"
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
@@ -79,6 +83,7 @@ const AirialPage = () => {
             }}
           >
             <img
+              loading="lazy"
               src={image}
               alt="image"
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
@@ -94,6 +99,7 @@ const AirialPage = () => {
             }}
           >
             <img
+              loading="lazy"
               src={image}
               alt="image"
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
@@ -112,6 +118,7 @@ const AirialPage = () => {
                 className="w-100 h-auto object-cover fade-in-on-load"
                 controls
                 autoPlay
+                preload="auto"
               >
                 <source src={video} typeof="video/mp4" />
                 Your browser does not support the video tag

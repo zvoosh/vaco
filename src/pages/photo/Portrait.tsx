@@ -120,13 +120,12 @@ const PortraitPage = () => {
             <div className="w-100 h-100 flex justify-center">
               <div className="mt-5 ">
                 <div className="big-image-container">
-                  <img
+                  <img loading="lazy"
                     key={ctx.index}
                     src={images[ctx.index].src}
                     alt={images[ctx.index].alt}
                     className="w-100 h-auto object-cover fade-in-on-load"
                     sizes="(max-width: 480px) 480px, (max-width: 800px) 800px, 1200px"
-                    loading="lazy"
                   />
                 </div>
                 <div className="text-white w-100 flex justify-center mt-5 pt-1 align-center  font-12 ">

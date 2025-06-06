@@ -1,4 +1,4 @@
-import video from "../../assets/9535416-uhd_3840_2160_30fps.mp4";
+import video from "../../assets/brige.mp4";
 import road from "../../assets/road.jpg";
 import mountain from "../../assets/mountain.jpg";
 import cowboy from "../../assets/cowboy.jpg";

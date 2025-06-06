@@ -15,7 +15,7 @@ const VideoDetailsPage = ({
     <div className="w-100 h-100 text-gray normal-font font-12">
       <div className="flex w-100 h-100 flex-column">
         <div className="video-thumbnail">
-          <img
+          <img loading="lazy"
             src={image}
             alt="image1"
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
@@ -33,7 +33,7 @@ const VideoDetailsPage = ({
                 {video &&
                   video.map((item, index) => (
                     <div key={index} className="w-100 flex video-video-padding">
-                      <video className="w-100 h-100 p-1" controls>
+                      <video className="w-100 h-100 p-1" controls preload="auto">
                         <source src={item} type="video/mp4" />
                         Your browser does not support the video tag.
                       </video>

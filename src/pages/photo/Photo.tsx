@@ -12,7 +12,7 @@ const PhotoPage = () => {
         <div className="division-card" onClick={()=> {
           navigate('/portrait')
         }}>
-          <img
+          <img loading="lazy"
             src={image3}
             alt="image"
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
@@ -24,7 +24,7 @@ const PhotoPage = () => {
         <div className="division-card"  onClick={()=> {
           navigate('/event')
         }}>
-          <img
+          <img loading="lazy"
             src={image2}
             alt="image"
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
@@ -36,7 +36,7 @@ const PhotoPage = () => {
         <div className="division-card" onClick={()=> {
           navigate('/coorporate')
         }}>
-          <img
+          <img loading="lazy"
             src={image}
             alt="image"
             style={{ width: "100%", height: "100%", objectFit: "cover" }}

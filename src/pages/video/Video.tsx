@@ -17,6 +17,7 @@ const VideoPage = () => {
           }}
         >
           <img
+            loading="lazy"
             src={image}
             alt="image"
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
@@ -25,10 +26,14 @@ const VideoPage = () => {
             <p className="division-overlay-text">FEATURE</p>
           </div>
         </div>
-        <div className="division-card" onClick={() => {
+        <div
+          className="division-card"
+          onClick={() => {
             navigate("/video-documentary");
-          }}>
+          }}
+        >
           <img
+            loading="lazy"
             src={image3}
             alt="image"
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
@@ -37,10 +42,14 @@ const VideoPage = () => {
             <p className="division-overlay-text">DOCUMENTARY</p>
           </div>
         </div>
-        <div className="division-card" onClick={() => {
+        <div
+          className="division-card"
+          onClick={() => {
             navigate("/video-commercial");
-          }}>
+          }}
+        >
           <img
+            loading="lazy"
             src={image2}
             alt="image"
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
@@ -49,10 +58,14 @@ const VideoPage = () => {
             <p className="division-overlay-text">COMMERCIAL</p>
           </div>
         </div>
-        <div className="division-card" onClick={() => {
+        <div
+          className="division-card"
+          onClick={() => {
             navigate("/video-event");
-          }}>
+          }}
+        >
           <img
+            loading="lazy"
             src={image}
             alt="image"
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
@@ -61,10 +74,14 @@ const VideoPage = () => {
             <p className="division-overlay-text">EVENT</p>
           </div>
         </div>
-        <div className="division-card" onClick={() => {
+        <div
+          className="division-card"
+          onClick={() => {
             navigate("/video-coorporate");
-          }}>
+          }}
+        >
           <img
+            loading="lazy"
             src={image2}
             alt="image"
             style={{ width: "100%", height: "100%", objectFit: "cover" }}

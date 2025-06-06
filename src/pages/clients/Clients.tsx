@@ -52,7 +52,7 @@ const ClientsPage = () => {
   return (
     <div className=" pb-2 text-gray w-100 h-100 flex flex-column normal-font font-12">
       <div className="thumbnail">
-        <img
+        <img loading="lazy"
           src={image2}
           alt="image1"
           style={{ width: "100%", height: "100%", objectFit: "cover" }}
@@ -64,7 +64,7 @@ const ClientsPage = () => {
             {card.map((element, index) => (
               <div key={index} className="client-card-container">
                 <div className="client-image-card">
-                  <img
+                  <img loading="lazy"
                     src={element.image}
                     alt={element.alt}
                     style={{

@@ -1,5 +1,5 @@
 import { Carousel } from "antd";
-import video from "../../assets/9535416-uhd_3840_2160_30fps.mp4";
+import video from "../../assets/brige.mp4";
 import "../../styles/event.scss";
 import "../../styles/clients.scss";
 import { useParams } from "react-router";
@@ -75,6 +75,7 @@ const ClientDetailsPage = () => {
                     onPlaying={handleVideoPlaying}
                     onPause={handleVideoPauseOrEnd}
                     onEnded={handleVideoPauseOrEnd}
+                    preload="auto"
                   >
                     <source src={video.src} type="video/mp4" />
                     Your browser does not support the video tag.

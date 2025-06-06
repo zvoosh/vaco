@@ -1,4 +1,4 @@
-import video from "../../assets/9535416-uhd_3840_2160_30fps.mp4";
+import video from "../../assets/brige.mp4";
 
 const BehindTheSceensPage = () => {
   return (
@@ -38,7 +38,7 @@ const BehindTheSceensPage = () => {
                 little time. The problem is us. And it is up to us if we want to
                 make it to 3 seconds.
               </div>
-              <video className="w-100 mb-1" controls>
+              <video className="w-100 mb-1" controls preload="auto">
                 <source src={video} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
