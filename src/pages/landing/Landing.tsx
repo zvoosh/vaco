@@ -46,7 +46,7 @@ const LandingPage = () => {
             Photographer & storyteller
           </p>
           <div className="w-100 flex justify-center">
-            <a href="/video" className="landing-btn">
+            <a href="vaco/video" className="landing-btn">
               View work
             </a>
           </div>
