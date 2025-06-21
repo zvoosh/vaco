@@ -1,97 +1,76 @@
-import { useNavigate } from "react-router";
 import image from "../../assets/road.jpg";
 import image2 from "../../assets/cowboy.jpg";
 import image3 from "../../assets/mountain.jpg";
 import "../../styles/arial.scss";
 
 const VideoPage = () => {
-  const navigate = useNavigate();
-
   return (
-    <div className="text-white w-100 pt-2 flex justify-center">
-      <div className="w-100 h-100">
-        <div
-          className="division-card"
-          onClick={() => {
-            navigate("/video-feature");
-          }}
-        >
+    <main className="text-white w-100 pt-2 flex justify-center">
+      <h2
+        id="video-heading"
+        className="visually-hidden"
+        style={{ position: "absolute" }}
+      >
+        Video Project Categories
+      </h2>
+      <section className="w-100 h-100">
+        <a href="/vaco/video-coorporate" className="division-card">
           <img
             loading="lazy"
             src={image}
-            alt="image"
+            alt="Poster image for feature film"
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
           />
           <div className="division-overlay">
             <p className="division-overlay-text">FEATURE</p>
           </div>
-        </div>
-        <div
-          className="division-card"
-          onClick={() => {
-            navigate("/video-documentary");
-          }}
-        >
+        </a>
+        <a href="/vaco/video-coorporate" className="division-card">
           <img
             loading="lazy"
             src={image3}
-            alt="image"
+            alt="Poster image for feature film"
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
           />
           <div className="division-overlay">
             <p className="division-overlay-text">DOCUMENTARY</p>
           </div>
-        </div>
-        <div
-          className="division-card"
-          onClick={() => {
-            navigate("/video-commercial");
-          }}
-        >
+        </a>
+        <a href="/vaco/video-coorporate" className="division-card">
           <img
             loading="lazy"
             src={image2}
-            alt="image"
+            alt="Poster image for feature film"
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
           />
           <div className="division-overlay">
             <p className="division-overlay-text">COMMERCIAL</p>
           </div>
-        </div>
-        <div
-          className="division-card"
-          onClick={() => {
-            navigate("/video-event");
-          }}
-        >
+        </a>
+        <a href="/vaco/video-coorporate" className="division-card">
           <img
             loading="lazy"
             src={image}
-            alt="image"
+            alt="Poster image for feature film"
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
           />
           <div className="division-overlay">
             <p className="division-overlay-text">EVENT</p>
           </div>
-        </div>
-        <div
-          className="division-card"
-          onClick={() => {
-            navigate("/video-coorporate");
-          }}
-        >
+        </a>
+        <a href="/vaco/video-coorporate" className="division-card">
           <img
             loading="lazy"
             src={image2}
-            alt="image"
+            alt="Poster image for feature film"
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
           />
           <div className="division-overlay">
             <p className="division-overlay-text">COORPORATE</p>
           </div>
-        </div>
-      </div>
-    </div>
+        </a>
+      </section>
+    </main>
   );
 };
 

@@ -18,7 +18,7 @@ const Header = () => {
     setIsOpen(false);
   }, [location.pathname]);
   return (
-    <div className="w-100 bg-black text-gray flex flex-column justify-center align-center header-font">
+    <main className="w-100 bg-black text-gray flex flex-column justify-center align-center header-font">
       <div
         className={`bg-gray text-white-gray w-100 text-center animated-element ${
           isOpen ? "expanded" : ""
@@ -251,7 +251,7 @@ const Header = () => {
           </div>
         </div>
       )}
-    </div>
+    </main>
   );
 };
 

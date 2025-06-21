@@ -9,10 +9,10 @@ import "../../styles/arial.scss";
 const AirialPage = () => {
   const ctx = useContext(MyContext);
   return (
-    <div className="text-white w-100 p-05 pt-2 flex justify-center">
+    <main className="text-white w-100 p-05 pt-2 flex justify-center">
       {!ctx?.value && (
         <div className="w-100 h-100">
-          <div
+          <a
             className="division-card"
             onClick={() => {
               ctx?.setValue(true);
@@ -21,13 +21,13 @@ const AirialPage = () => {
             <img
               loading="lazy"
               src={image3}
-              alt="image"
+              alt="Drone view in forest"
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
             />
             <div className="division-overlay">
               <p className="division-overlay-text">DRON IN AIR</p>
             </div>
-          </div>
+          </a>
           <div
             className="division-card"
             onClick={() => {
@@ -37,7 +37,7 @@ const AirialPage = () => {
             <img
               loading="lazy"
               src={image2}
-              alt="image"
+              alt="Drone view in forest"
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
             />
             <div className="division-overlay">
@@ -53,7 +53,7 @@ const AirialPage = () => {
             <img
               loading="lazy"
               src={image}
-              alt="image"
+              alt="Drone view in forest"
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
             />
             <div className="division-overlay">
@@ -69,7 +69,7 @@ const AirialPage = () => {
             <img
               loading="lazy"
               src={image2}
-              alt="image"
+              alt="Drone view in forest"
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
             />
             <div className="division-overlay">
@@ -85,7 +85,7 @@ const AirialPage = () => {
             <img
               loading="lazy"
               src={image}
-              alt="image"
+              alt="Drone view in forest"
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
             />
             <div className="division-overlay">
@@ -101,7 +101,7 @@ const AirialPage = () => {
             <img
               loading="lazy"
               src={image}
-              alt="image"
+              alt="Drone view in forest"
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
             />
             <div className="division-overlay">
@@ -114,21 +114,23 @@ const AirialPage = () => {
         <div className="w-100 flex justify-center">
           <div className="mt-1">
             <div className="video-container">
-              <video
-                className="w-100 h-auto object-cover fade-in-on-load"
-                controls
-                autoPlay
-                muted
-                preload="auto"
-              >
-                <source src={video} typeof="video/mp4" />
-                Your browser does not support the video tag
-              </video>
+              <figure>
+                <video
+                  className="w-100 h-auto object-cover fade-in-on-load"
+                  controls
+                  autoPlay
+                  muted
+                  preload="auto"
+                >
+                  <source src={video} typeof="video/mp4" />
+                  Your browser does not support the video tag
+                </video>
+              </figure>
             </div>
           </div>
         </div>
       )}
-    </div>
+    </main>
   );
 };
 

@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router";
 import image from "../../assets/prva.jpg";
 import image2 from "../../assets/road.jpg";
 import "../../styles/clients.scss";
@@ -47,12 +46,11 @@ const card = [
 ];
 
 const ClientsPage = () => {
-  const navigate = useNavigate();
-
   return (
     <div className=" pb-2 text-gray w-100 h-100 flex flex-column normal-font font-12">
       <div className="thumbnail">
-        <img loading="lazy"
+        <img
+          loading="lazy"
           src={image2}
           alt="image1"
           style={{ width: "100%", height: "100%", objectFit: "cover" }}
@@ -62,9 +60,10 @@ const ClientsPage = () => {
         <div className="client-container">
           <div className="w-100 h-100 pt-2 flex flex-column">
             {card.map((element, index) => (
-              <div key={index} className="client-card-container">
+              <article key={index} className="client-card-container">
                 <div className="client-image-card">
-                  <img loading="lazy"
+                  <img
+                    loading="lazy"
                     src={element.image}
                     alt={element.alt}
                     style={{
@@ -76,21 +75,18 @@ const ClientsPage = () => {
                 </div>
                 <div className="client-text-card">
                   <div className="font-16 flex">
-                    <div>{element.title}</div>{" "}
+                    <h2 className="font-16">{element.title}</h2>
                   </div>
                   <div className="pt-1">{element.description}</div>
-                  <div
+                  <a
+                    href={`/vaco/clients/details/${element.title}`}
                     className="link-see-more"
-                    onClick={() => {
-                      navigate(`/clients/details/${element.title}`);
-                    }}
                   >
                     Show more
-                  </div>
+                  </a>
                 </div>
-              </div>
+              </article>
             ))}
-
           </div>
         </div>
       </div>

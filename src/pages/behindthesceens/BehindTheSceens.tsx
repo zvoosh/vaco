@@ -2,20 +2,20 @@ import video from "../../assets/brige.mp4";
 
 const BehindTheSceensPage = () => {
   return (
-    <div className="w-100 h-100 text-gray">
+    <main className="w-100 h-100 text-gray">
       <div className="flex justify-center w-100 h-100">
         <div className="basic-container">
-          <div>
-            <div className="font-20 normal-font pb-2 text-white w-100">
+          <section>
+            <h1 className="font-20 normal-font pb-2 text-white w-100">
               Behind the sceens
-            </div>
+            </h1>
             <div className="pb-2 normal-font font-12">
-              <div className="pb-1">
+              <p className="pb-1">
                 "The world will not be destroyed by those who do evil, but by
                 those who watch them without doing anything." - Albert Einstein
                 Planet
-              </div>
-              <div className="pb-1">
+              </p>
+              <p className="pb-1">
                 Earth is 4.5 billion years old. Mankind is about 140 thousand
                 years old. If we compress the Earth's existence into a normal
                 full day of 24 hours, then we’ve been on this planet for... 2.5
@@ -25,8 +25,8 @@ const BehindTheSceensPage = () => {
                 burned fossil fuels creating more carbon in the atmosphere than
                 ever before. We have caused global warming at a record pace,
                 endangering our own existence.
-              </div>
-              <div className="pb-1">
+              </p>
+              <p className="pb-1">
                 We have cut trees and destroyed forests more than ever before,
                 polluted air, water, and soil. We have created an island of
                 waste, the size of the state of Texas, in the middle of the
@@ -37,16 +37,16 @@ const BehindTheSceensPage = () => {
                 evolution for us to exist and we have changed so much in so
                 little time. The problem is us. And it is up to us if we want to
                 make it to 3 seconds.
-              </div>
-              <video className="w-100 mb-1" controls preload="auto">
+              </p>
+              <video className="w-100 mb-1" controls preload="auto" title="Behind the scenes video with environmental message">
                 <source src={video} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
-          </div>
+          </section>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 
