@@ -1,25 +1,30 @@
 import "../../styles/arial.scss";
-import { useContext, useEffect } from "react";
-import { MyDataContext } from "../../services/ctx/data.ctx";
 import { useFolderTreeQuery } from "../../api/queries";
 import { Spin } from "antd";
 import { LoadingOutlined } from "@ant-design/icons";
-import { findImageId } from "../../hooks";
+import { ErrorPage } from "../../components/ErrorPage";
 import { Link } from "react-router";
+import type { IFolderTreeContent } from "../../types";
 
-const FOLDER_ID_PHOTOS = "1h8VfzPCtUNCOQudRz28rZoe2YrG_Ndqm";
+const FOLDER_ID_PHOTOS = "Vaco folder structure/Photo";
 
 const PhotoPage = () => {
-  const ctx = useContext(MyDataContext);
+  const { data, isLoading, error } = useFolderTreeQuery(
+    FOLDER_ID_PHOTOS,
+    "photos",
+  );
 
-  const { data, isLoading, error, isSuccess } =
-    useFolderTreeQuery(FOLDER_ID_PHOTOS);
+  const sectionTitle = (item: IFolderTreeContent) => {
+    if (item.name.includes("Corporate")) return "CORPORATE";
+    if (item.name.includes("Event")) return "EVENT";
+    return "CORPORATE";
+  };
 
-  useEffect(() => {
-    if (isSuccess && data) {
-      ctx?.setData(data);
-    }
-  }, [data]);
+  const linkTo = (item: IFolderTreeContent) => {
+    if (item.name.includes("Event")) return "/photo-event";
+    if (item.name.includes("Corporate")) return "/photo-corporate";
+    return "/photo";
+  };
 
   if (isLoading)
     return (
@@ -40,64 +45,25 @@ const PhotoPage = () => {
       </div>
     );
 
-  if (error) return <div>Error loading files.</div>;
+  if (error) return <ErrorPage errorType={500} />;
+
   return (
     <main className="text-white w-100 p-05 pt-2 flex justify-center">
       <div className="w-100 h-100">
-        {findImageId(ctx, "PortraitThumbnail") ? (
-          <Link className="division-card" to="/portrait">
-            <img
-              loading="lazy"
-              src={`https://drive.google.com/thumbnail?id=${findImageId(
-                ctx,
-                "PortraitThumbnail"
-              )}&sz=w1000`}
-              alt="Portrait photography thumbnail"
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
-            />
-            <div className="division-overlay">
-              <p className="division-overlay-text">Portrait</p>
-            </div>
-          </Link>
-        ) : (
-          <div></div>
-        )}
-        {findImageId(ctx, "EventThumbnail") ? (
-          <Link className="division-card" to="/event">
-            <img
-              loading="lazy"
-              src={`https://drive.google.com/thumbnail?id=${findImageId(
-                ctx,
-                "EventThumbnail"
-              )}&sz=w1000`}
-              alt="Portrait photography thumbnail"
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
-            />
-            <div className="division-overlay">
-              <p className="division-overlay-text">Event</p>
-            </div>
-          </Link>
-        ) : (
-          <div></div>
-        )}
-        {findImageId(ctx, "CorporateThumbnail") ? (
-          <Link to="/coorporate" className="division-card">
-            <img
-              loading="lazy"
-              src={`https://drive.google.com/thumbnail?id=${findImageId(
-                ctx,
-                "CorporateThumbnail"
-              )}&sz=w1000`}
-              alt="Portrait photography thumbnail"
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
-            />
-            <div className="division-overlay">
-              <p className="division-overlay-text">Corporate</p>
-            </div>
-          </Link>
-        ) : (
-          <div></div>
-        )}
+        {data &&
+          data.map((item: IFolderTreeContent, index: number) => (
+            <Link className="division-card" to={linkTo(item)} key={index}>
+              <img
+                loading="lazy"
+                src={item.files[0]}
+                alt="Portrait photography thumbnail"
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              />
+              <div className="division-overlay">
+                <p className="division-overlay-text">{sectionTitle(item)}</p>
+              </div>
+            </Link>
+          ))}
       </div>
     </main>
   );

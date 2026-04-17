@@ -1,42 +1,55 @@
 import "../../styles/video.scss";
-import { useContext, useEffect } from "react";
-import { MyDataContext, type DriveItem } from "../../services/ctx/data.ctx";
-import { useNavigate } from "react-router";
+import { Spin } from "antd";
+import { LoadingOutlined } from "@ant-design/icons";
+import { useFolderContent } from "../../api/queries";
+import { ErrorPage } from "../../components/ErrorPage";
+import type { IFolderContent } from "../../types";
 
 const VideoDetailsPage = ({
   title,
   description,
-  foldervideo,
-  folderthumbnail,
+  folderId,
+  thumbnail,
 }: {
   title: string;
   description: string;
-  foldervideo: string;
-  folderthumbnail: string;
+  folderId: string;
+  thumbnail: string;
 }) => {
-  const ctx = useContext(MyDataContext);
-  const navigate = useNavigate();
-  const thumbnailFolder = ctx?.data?.children?.find((f) =>
-    f.name.includes(folderthumbnail)
+  const { data, isLoading, error } = useFolderContent(
+    `Vaco folder structure/Video/Videos/${folderId}`,
+    "videoDetails",
   );
-  const videoFolder = ctx?.data?.children?.find((f) =>
-    f.name.includes(foldervideo)
-  );
-  const imageId = thumbnailFolder?.children?.[0]?.id;
-  useEffect(() => {
-    if (!ctx?.data) {
-      navigate("/video");
-    }
-  }, [ctx?.data]);
+
+  if (isLoading)
+    return (
+      <div
+        style={{
+          width: "100vw",
+          height: "100vh",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <Spin
+          indicator={
+            <LoadingOutlined style={{ fontSize: 48, color: "gray" }} spin />
+          }
+        />
+      </div>
+    );
+
+  if (error) return <ErrorPage errorType={500} />;
 
   return (
     <main className="w-100 h-100 text-gray normal-font font-12">
       <div className="flex w-100 h-100 flex-column">
-        {imageId && (
+        {thumbnail && (
           <div className="video-thumbnail">
             <img
               loading="lazy"
-              src={`https://drive.google.com/thumbnail?id=${imageId}&sz=w1000`}
+              src={thumbnail}
               alt="thumbnail"
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
             />
@@ -49,20 +62,20 @@ const VideoDetailsPage = ({
               <div className="video-text-padding w-100">
                 <p>{description}</p>
               </div>
-              <div className="flex flex-column w-100 pb-5">
-                {videoFolder?.children?.map((vid: DriveItem) => {
-                  return (
-                    <div key={vid.id}>
-                      <iframe
-                        src={`https://drive.google.com/file/d/${vid.id}/preview`}
-                        allow="autoplay"
-                        className="mb-2 border-none video-frame"
-                        allowFullScreen
-                        title="Google Drive Video"
-                      />
-                    </div>
-                  );
-                })}
+              <div className="flex flex-column justify-center w-100">
+                {data &&
+                  data.map((item: IFolderContent) => {
+                    return (
+                      <div>
+                        <iframe
+                          src={item.url}
+                          className="mb-2 border-none"
+                          style={{ aspectRatio: "16/9", borderRadius: "5px" }}
+                          allowFullScreen
+                        />
+                      </div>
+                    );
+                  })}
               </div>
             </div>
           </div>

@@ -41,11 +41,11 @@
   gap: 25px;
 }
 
-.decoration-none{
+.decoration-none {
   text-decoration: none;
 }
 
-.border-1{
+.border-1 {
   border: 1px solid black;
 }
 
@@ -113,4 +113,18 @@
     width: 75vw;
     height: 75vh;
   }
+}
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  overflow: hidden;
+  background-color: #000;
+}
+.video-thumbnail,
+.video-iframe {
+  z-index: 1;
+}
+.play-button {
+  z-index: 2;
 }

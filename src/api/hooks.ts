@@ -1,8 +1,14 @@
-import type { DriveItem } from "../services/ctx/data.ctx";
+
+//treba ti token sa backenda
 
 export const fetchFolderContents = async (folderId: string) => {
   const res = await fetch(
-    `https://vaco-backend.onrender.com/api/fetch-folder?folderId=${folderId}`
+    `https://vacobackend.vercel.app/api/fetch-folder?folderId=${folderId}`,
+    {
+      headers: {
+        Authorization: `Bearer ${import.meta.env.VITE_PUBLIC_KEY}`,
+      },
+    }
   );
   if (!res.ok) throw new Error("Failed to fetch folder");
   return await res.json(); // array of file metadata
@@ -10,7 +16,12 @@ export const fetchFolderContents = async (folderId: string) => {
 
 export const fetchFileContent = async (fileId: string) => {
   const res = await fetch(
-    `https://vaco-backend.onrender.com/api/fetch-text?fileId=${fileId}`
+    `https://vacobackend.vercel.app/api/fetch-text?fileId=${fileId}`,
+    {
+      headers: {
+        Authorization: `Bearer ${import.meta.env.VITE_PUBLIC_KEY}`,
+      },
+    }
   );
   if (!res.ok) throw new Error("Failed to fetch file content");
   return await res.text();
@@ -19,17 +30,22 @@ export const fetchFileContent = async (fileId: string) => {
 export const isFolder = (file: any) =>
   file.mimeType === "application/vnd.google-apps.folder";
 
-export const fetchFolderTree = async (folderId: string): Promise<DriveItem> => {
+export const fetchFolderTree = async (folderId: string): Promise<any> => {
   const res = await fetch(
-    `https://vaco-backend.onrender.com/api/fetch-folder?folderId=${folderId}`
+    `https://vacobackend.vercel.app/api/fetch-folder-content?folderId=${folderId}`,
+    {
+      headers: {
+        Authorization: `Bearer ${import.meta.env.VITE_PUBLIC_KEY}`,
+      },
+    }
   );
   if (!res.ok) throw new Error("Failed to fetch folder tree");
-  return await res.json(); // already nested DriveItem object
+  return await res.json();
 };
 // 🔁 Recursive function
 export const loadAllFilesRecursively = async (
   folderId: string
-): Promise<DriveItem[]> => {
+): Promise<any[]> => {
   const files = await fetchFolderContents(folderId);
 
   const allFiles: any[] = [];

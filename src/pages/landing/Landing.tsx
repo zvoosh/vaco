@@ -4,12 +4,14 @@ import "antd/dist/reset.css";
 import { CiFacebook, CiInstagram, CiMail, CiYoutube } from "react-icons/ci";
 import "../../styles/landing.scss";
 import { Link } from "react-router";
-import { useFolderTreeQuery } from "../../api/queries";
+import { ErrorPage } from "../../components/ErrorPage";
+import { useFolderContent } from "../../api/queries";
+import type { IFolderContent } from "../../types";
 
-const FOLDER_ID = "1_qQjN6SWT-9y0hRwUd1_mFpqnkT-GG9X";
+const FOLDER_ID = "Vaco%20folder%20structure/Home";
 const LandingPage = () => {
-  const { data, error } = useFolderTreeQuery(FOLDER_ID);
-  if (error) return <div>Error loading files.</div>;
+  const { data, error } = useFolderContent(FOLDER_ID, "landing-carousel");
+  if (error) return <ErrorPage errorType={500} />;
   return (
     <main
       className="landing-wrapper header-font"
@@ -24,13 +26,9 @@ const LandingPage = () => {
           draggable={false}
         >
           {data &&
-            data.children &&
-            data.children.map((item: any) => {
+            data.map((item: IFolderContent) => {
               return (
-                <img
-                  src={`https://drive.google.com/thumbnail?id=${item.id}&sz=w1000`}
-                  alt="Portrait of VACO capturized moments"
-                />
+                <img src={item.url} alt="Portrait of VACO capturized moments" />
               );
             })}
         </Carousel>
@@ -58,7 +56,7 @@ const LandingPage = () => {
             </Link>
           </div>
         </div>
-        <div className="text-white mb-2">
+        <div className="text-white mb-2 flex items-center" style={{marginTop: "1.5rem"}}>
           <CiMail className="mr-2" style={{ transform: "scale(2)" }} />
           <CiFacebook className="mr-2" style={{ transform: "scale(2)" }} />
           <CiInstagram className="mr-2" style={{ transform: "scale(2)" }} />

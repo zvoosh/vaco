@@ -5,7 +5,7 @@ const ContactPage = () => {
   return (
     <>
       <main>
-        <div className="w-100 h-100 bg-black flex justify-center pt-3">
+        <div className="w-100 h-100 bg-black flex justify-center p-1 pt-3">
           <div className="container">
             <section className="container-info">
               <div className="image-container">

@@ -2,10 +2,10 @@ import { Routes, Route, useLocation } from "react-router-dom"; // ✅ use `react
 import { AnimatePresence } from "framer-motion";
 import RootLayout from "./RootLayout";
 import {
-  AirialPage,
+  // AirialPage,
   BehindTheSceensPage,
-  ClientDetailsPage,
-  ClientsPage,
+  // ClientDetailsPage,
+  // ClientsPage,
   ContactPage,
   CoorporatePage,
   EventPage,
@@ -13,10 +13,11 @@ import {
   GearPage,
   LandingPage,
   PhotoPage,
-  PortraitPage,
+  // PortraitPage,
   VideoPage,
 } from "../pages";
 import PageWrapper from "../components/PageWrapper";
+import { ErrorPage } from "../components/ErrorPage";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -50,13 +51,29 @@ const AnimatedRoutes = () => {
             }
           />
           <Route
+            path="/photo-corporate"
+            element={
+              <PageWrapper>
+                <CoorporatePage />
+              </PageWrapper>
+            }
+          />
+          <Route
+            path="/photo-event"
+            element={
+              <PageWrapper>
+                <EventPage />
+              </PageWrapper>
+            }
+          />
+          {/* <Route
             path="/portrait"
             element={
               <PageWrapper>
                 <PortraitPage />
               </PageWrapper>
             }
-          />
+          /> */}
           <Route
             path="/event"
             element={
@@ -73,7 +90,7 @@ const AnimatedRoutes = () => {
               </PageWrapper>
             }
           />
-          <Route
+          {/* <Route
             path="/clients"
             element={
               <PageWrapper>
@@ -88,15 +105,15 @@ const AnimatedRoutes = () => {
                 <ClientDetailsPage />
               </PageWrapper>
             }
-          />
-          <Route
+          /> */}
+          {/* <Route
             path="/airial"
             element={
               <PageWrapper>
                 <AirialPage />
               </PageWrapper>
             }
-          />
+          /> */}
           <Route
             path="/video"
             element={
@@ -178,6 +195,14 @@ const AnimatedRoutes = () => {
             }
           />
         </Route>
+        <Route
+          path="*"
+          element={
+            <PageWrapper>
+              <ErrorPage errorType={404} />
+            </PageWrapper>
+          }
+        />
       </Routes>
     </AnimatePresence>
   );

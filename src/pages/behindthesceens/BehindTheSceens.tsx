@@ -1,10 +1,11 @@
 import { LoadingOutlined } from "@ant-design/icons";
 import { Spin } from "antd";
-import { useFolderTreeQuery } from "../../api/queries";
+import { useFolderContent } from "../../api/queries";
+import { ErrorPage } from "../../components/ErrorPage";
 
-const VIDEO_ID = "1Z2r4GcK6GJSZdQ9ivwOU4eG7hnDE65ou";
+const VIDEO_ID = "Vaco folder structure/BehindTheSceens";
 const BehindTheSceensPage = () => {
-  const { data, isLoading, error } = useFolderTreeQuery(VIDEO_ID);
+  const { data, isLoading, error } = useFolderContent(VIDEO_ID);
 
   if (isLoading)
     return (
@@ -24,10 +25,10 @@ const BehindTheSceensPage = () => {
         />
       </div>
     );
-  if (error) return <div>Error loading files.</div>;
+  if (error) return <ErrorPage errorType={500} />;
 
   return (
-    <main className="w-100 h-100 text-gray">
+    <main className="w-100 h-100 text-gray p-1">
       <div className="flex justify-center w-100 h-100">
         <div className="basic-container">
           <section>
@@ -43,8 +44,8 @@ const BehindTheSceensPage = () => {
               <p className="pb-1">
                 Earth is 4.5 billion years old. Mankind is about 140 thousand
                 years old. If we compress the Earth's existence into a normal
-                full day of 24 hours, then we’ve been on this planet for... 2.5
-                seconds. In 2.5 seconds we’ve become the dominant species with a
+                full day of 24 hours, then we've been on this planet for... 2.5
+                seconds. In 2.5 seconds we've become the dominant species with a
                 rapidly growing population, causing a catastrophic impact on the
                 environment. We have created the industrial revolution and
                 burned fossil fuels creating more carbon in the atmosphere than
@@ -56,24 +57,25 @@ const BehindTheSceensPage = () => {
                 polluted air, water, and soil. We have created an island of
                 waste, the size of the state of Texas, in the middle of the
                 ocean. We have caused the 4th mass animal extinction.
-                Three-quarters of Earth’s land surface is under pressure from
-                human activity. In just 2.5 seconds we’ve turned the planet into
+                Three-quarters of Earth's land surface is under pressure from
+                human activity. In just 2.5 seconds we've turned the planet into
                 our own personal factory. It took almost 4.5 billion years of
                 evolution for us to exist and we have changed so much in so
                 little time. The problem is us. And it is up to us if we want to
                 make it to 3 seconds.
               </p>
-              <div className="w-100 h-100 mt-5">
-                <iframe
-                  src={`https://drive.google.com/file/d/${
-                    data?.children![0].id
-                  }/preview`}
-                  allow="autoplay"
-                  className="border-none video-frame"
-                  allowFullScreen
-                  title="Google Drive Video"
-                />
-              </div>
+              {data && (
+                <div className="w-100 h-100 mt-5">
+                  <iframe
+                    src={data[0].url}
+                    allow="autoplay"
+                    className="border-none"
+                    allowFullScreen
+                    title="Google Drive Video"
+                    style={{ aspectRatio: "16/9", borderRadius: "5px" }}
+                  />
+                </div>
+              )}
             </div>
           </section>
         </div>

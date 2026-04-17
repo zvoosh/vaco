@@ -1,15 +1,38 @@
-import { useContext } from "react";
 import "../../styles/event.scss";
-import { MyDataContext } from "../../services/ctx/data.ctx";
-import { Image } from "antd";
-import { filterFolder } from "../../hooks";
-import { Link } from "react-router";
+import { Image, Spin } from "antd";
+import { useFolderContent } from "../../api/queries";
+import { LoadingOutlined } from "@ant-design/icons";
+import { ErrorPage } from "../../components/ErrorPage";
+import type { IFolderContent } from "../../types";
 
+const FOLDER_ID_PHOTOS = "Vaco folder structure/Photo/EventPhotos";
 const EventPage = () => {
-  const ctxData = useContext(MyDataContext);
-  const corporatePhotos =
-    ctxData?.data &&
-    filterFolder(ctxData.data, "EventPhoto")?.children?.[0]?.children;
+  const { data, isLoading, isFetching, error } = useFolderContent(
+    FOLDER_ID_PHOTOS,
+    "event-photos",
+  );
+
+  if (isLoading || isFetching) {
+    return (
+      <div
+        style={{
+          width: "100vw",
+          height: "100vh",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <Spin
+          indicator={
+            <LoadingOutlined style={{ fontSize: 48, color: "gray" }} spin />
+          }
+        />
+      </div>
+    );
+  }
+
+  if (error) return <ErrorPage errorType={500} />;
 
   return (
     <main className="pt-2">
@@ -23,13 +46,13 @@ const EventPage = () => {
       <div className="w-100 h-100 flex justify-center">
         <div className="w-100 h-100 flex justify-center">
           <div className="card-grid">
-            {corporatePhotos && corporatePhotos.length > 0 ? (
+            {data && data.length > 0 && (
               <Image.PreviewGroup>
-                {corporatePhotos.map((element: any, index: number) => (
+                {data.map((element: IFolderContent, index: number) => (
                   <Image
                     loading="eager"
                     key={index}
-                    src={`https://drive.google.com/thumbnail?id=${element.id}&sz=w1000`}
+                    src={element.url}
                     alt={element.name}
                     className="responsive"
                     style={{
@@ -40,23 +63,6 @@ const EventPage = () => {
                   />
                 ))}
               </Image.PreviewGroup>
-            ) : (
-              <div className="text-center text-white">
-                No images available at this time
-                <Link to="/photo" className="w-100 mt-1 flex justify-center">
-                  <div
-                    className="decoration-none text-black"
-                    style={{
-                      width: "fit-content",
-                      border: "1px solid white",
-                      backgroundColor: "white",
-                      padding: ".5rem 1rem",
-                    }}
-                  >
-                    Back
-                  </div>
-                </Link>
-              </div>
             )}
           </div>
         </div>

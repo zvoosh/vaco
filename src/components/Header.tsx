@@ -64,7 +64,7 @@ const Header = () => {
         >
           Photo
         </div>
-        <div
+        {/* <div
           className={`p-05 font-12 ${
             location.pathname == "/airial" ? "text-white bold" : ""
           }`}
@@ -74,8 +74,8 @@ const Header = () => {
           }}
         >
           Airial
-        </div>
-        <div
+        </div> */}
+        {/* <div
           key={location.pathname}
           className={`p-05 font-12 ${
             location.pathname.includes("/clients") ? "text-white bold" : ""
@@ -86,7 +86,7 @@ const Header = () => {
           }}
         >
           Clients
-        </div>
+        </div> */}
         <div
           className={`p-05 font-12 ${
             location.pathname == "/behind-the-sceens" ? "text-white bold" : ""
@@ -98,7 +98,7 @@ const Header = () => {
         >
           Behind the sceens
         </div>
-        <div
+        {/* <div
           className={`p-05 font-12 ${
             location.pathname == "/gear" ? "text-white bold" : ""
           }`}
@@ -108,7 +108,7 @@ const Header = () => {
           }}
         >
           Gear
-        </div>
+        </div> */}
         <div
           className={`p-05 font-12 ${
             location.pathname == "/contact" ? "text-white bold" : ""
@@ -193,7 +193,7 @@ const Header = () => {
           >
             <div>Photo</div>
           </div>
-          <div
+          {/* <div
             className={`pointer user-none ${
               location.pathname == "/airial" ? "text-white bold" : ""
             }`}
@@ -212,7 +212,7 @@ const Header = () => {
             }}
           >
             Clients
-          </div>
+          </div> */}
           <div
             className={`pointer user-none ${
               location.pathname == "/behind-the-sceens" ? "text-white bold" : ""
@@ -223,7 +223,7 @@ const Header = () => {
           >
             Behind the Sceens
           </div>
-          <div
+          {/* <div
             className={`pointer user-none ${
               location.pathname == "/gear" ? "text-white bold" : ""
             }`}
@@ -232,7 +232,7 @@ const Header = () => {
             }}
           >
             Gear
-          </div>
+          </div> */}
           <div
             className={`pointer user-none ${
               location.pathname == "/contact" ? "text-white bold" : ""

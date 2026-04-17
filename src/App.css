@@ -11,3 +11,6 @@ body {
   scroll-behavior: smooth;
   overflow: visible;
 }
+* {
+  forced-color-adjust: auto;
+}

@@ -2,12 +2,12 @@ import { createBrowserRouter } from "react-router";
 import {
   ContactPage,
   EventPage,
-  PortraitPage,
-  ClientsPage,
-  ClientDetailsPage,
+  // PortraitPage,
+  // ClientsPage,
+  // ClientDetailsPage,
   CoorporatePage,
   LandingPage,
-  AirialPage,
+  // AirialPage,
   FeaturePage,
   VideoPage,
   PhotoPage,
@@ -16,7 +16,7 @@ import {
 } from "../pages";
 import RootLayout from "./RootLayout";
 
-export let router = createBrowserRouter(
+export const router = createBrowserRouter(
   [
     {
       path: "/",
@@ -34,10 +34,10 @@ export let router = createBrowserRouter(
           path: "photo",
           Component: PhotoPage,
         },
-        {
-          path: "portrait",
-          Component: PortraitPage,
-        },
+        // {
+        //   path: "portrait",
+        //   Component: PortraitPage,
+        // },
         {
           path: "event",
           Component: EventPage,
@@ -46,18 +46,18 @@ export let router = createBrowserRouter(
           path: "coorporate",
           Component: CoorporatePage,
         },
-        {
-          path: "clients",
-          Component: ClientsPage,
-        },
-        {
-          path: "clients/details/:client",
-          Component: ClientDetailsPage,
-        },
-        {
-          path: "airial",
-          Component: AirialPage,
-        },
+        // {
+        //   path: "clients",
+        //   Component: ClientsPage,
+        // },
+        // {
+        //   path: "clients/details/:client",
+        //   Component: ClientDetailsPage,
+        // },
+        // {
+        //   path: "airial",
+        //   Component: AirialPage,
+        // },
         {
           path: "video",
           Component: VideoPage,
