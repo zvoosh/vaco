@@ -35,8 +35,8 @@
   align-items: center;
   width: 100%;
   box-sizing: border-box;
-  padding-top: 2.2rem;
-  letter-spacing: 1.5rem;
+  padding-top: 1rem;
+  letter-spacing: 1.2rem;
   padding-bottom: 1rem;
 }
 .header-center {
@@ -44,6 +44,7 @@
   font-size: clamp(1.2rem, 5vw, 2rem);
   z-index: 5;
   height: 100%;
+  font-size: 1.33rem;
 }
 
 .header-left {
@@ -130,7 +131,8 @@
 @media (min-width: 1440px) {
   .links-container {
     display: flex;
-    width: 768px;
+    width: 500px;
+    font-size: 1rem;
   }
   .menu-btn {
     display: none;

@@ -51,27 +51,34 @@ const VideoDetailsPage = ({
               loading="lazy"
               src={thumbnail}
               alt="thumbnail"
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              style={{ width: "100%", height: "100%", objectFit: "cover",  objectPosition: "100% 30%" }}
             />
           </div>
         )}
-        <div className="w-100 flex justify-center">
+        <div className="w-100 flex justify-center pt-0">
           <div className="video-details-container">
-            <div className="w-100 h-100 pt-2 flex flex-column">
+            <div className="w-100 h-100 flex flex-column">
               <h1 className="font-16 bold p-1 w-100 text-center">{title}</h1>
-              <div className="video-text-padding w-100">
+              <div className="w-100 pb-4">
                 <p>{description}</p>
               </div>
-              <div className="flex flex-column justify-center w-100">
+              <div className="flex flex-column align-center justify-center w-100">
                 {data &&
-                  data.map((item: IFolderContent) => {
+                  data.map((item: IFolderContent, index: number) => {
                     return (
-                      <div>
-                        <iframe
+                      <div style={{ width: "85%" }} key={`${item.url}${index}`}>
+                        <video
                           src={item.url}
                           className="mb-2 border-none"
-                          style={{ aspectRatio: "16/9", borderRadius: "5px" }}
-                          allowFullScreen
+                          style={{
+                            aspectRatio: "16/9",
+                            borderRadius: "5px",
+                            width: "100%",
+                          }}
+                          controls
+                          onLoadedMetadata={(e) => {
+                            (e.target as HTMLVideoElement).volume = 0.3;
+                          }}
                         />
                       </div>
                     );

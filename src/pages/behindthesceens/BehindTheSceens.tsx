@@ -66,13 +66,19 @@ const BehindTheSceensPage = () => {
               </p>
               {data && (
                 <div className="w-100 h-100 mt-5">
-                  <iframe
+                  <video
                     src={data[0].url}
-                    allow="autoplay"
                     className="border-none"
-                    allowFullScreen
                     title="Google Drive Video"
-                    style={{ aspectRatio: "16/9", borderRadius: "5px" }}
+                    style={{
+                      aspectRatio: "16/9",
+                      width: "100%",
+                      borderRadius: "5px",
+                    }}
+                    controls
+                    onLoadedMetadata={(e) => {
+                      (e.target as HTMLVideoElement).volume = 0.3;
+                    }}
                   />
                 </div>
               )}

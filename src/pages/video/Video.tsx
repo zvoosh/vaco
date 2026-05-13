@@ -101,7 +101,7 @@ const VideoPage = () => {
                 loading="eager"
                 src={item.files[0]}
                 alt="Poster image for feature film"
-                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "100% 25%" }}
               />
               <div className="division-overlay">
                 <p className="division-overlay-text">{sectionTitle(item)}</p>
